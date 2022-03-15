@@ -39,8 +39,8 @@
 
   .block:hover {
     color: white;
-    box-shadow: 0 3px 34px rgba(157, 92, 221, 0.4);
-    background: linear-gradient(97.01deg, #9290f5 -4.32%, #3736be 89.23%);
+    box-shadow: 0 3px 34px rgba(228, 141, 10, 0.4);
+    background: linear-gradient(97.01deg, orange -4.32%, orangered 89.23%);
   }
 
   img {
@@ -81,17 +81,17 @@
 
 .sqFill {
   transition: all 0.5s ease 0s;
-  fill: #d7e0ff;
+  fill: orange;
 }
 
 .sqStroke {
   transition: all 0.5s ease 0s;
-  stroke: #6462d9;
+  stroke: orange;
 }
 
 .block:hover .sqFill,
 .miniBlock:hover .sqFill {
-  fill: #8381ec;
+  fill: orange;
 }
 
 .block:hover .sqStroke,
@@ -154,8 +154,8 @@
 
   .miniBlock:hover {
     color: white;
-    box-shadow: 0 3px 34px rgba(157, 92, 221, 0.4);
-    background: linear-gradient(97.01deg, #9290f5 -4.32%, #3736be 89.23%);
+    box-shadow: 0 3px 34px rgba(233, 183, 20, 0.4);
+    background: linear-gradient(97.01deg, orange -4.32%, orangered 89.23%);
     transition: all 0.5s ease 0s;
   }
 

@@ -42,7 +42,7 @@ code {
   padding-bottom: 40px !important;
 }
 :root {
-  --swiper-theme-color: #7473e3 !important;
+  --swiper-theme-color: orange !important;
 }
 
 .swiper-button-next {
@@ -91,4 +91,28 @@ button {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
+}
+
+
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root{
+  color: rgba(255, 255, 255, 0.8);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.css-1sumxir-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 17px;  
+}
+
+.css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked{
+  color: white;
+}
+.css-vqmohf-MuiButtonBase-root-MuiRadio-root{
+  color: white;
+}
+
+.swiper-pagination-bullet{
+  background-color: orange !important; 
 }
