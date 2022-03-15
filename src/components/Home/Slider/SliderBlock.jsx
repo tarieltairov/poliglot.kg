@@ -106,8 +106,8 @@ const Slider = () => {
                       y2='69.4304'
                       gradientUnits='userSpaceOnUse'
                     >
-                      <stop stop-color='#9290F5' />
-                      <stop offset='1' stop-color='#3736BE' />
+                      <stop stop-color='orange' />
+                      <stop offset='1' stop-color='orange' />
                     </linearGradient>
                   </defs>
                 </svg>

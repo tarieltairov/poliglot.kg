@@ -52,13 +52,13 @@
       .lineIndicator {
         width: 100%;
         height: 1px;
-        border-top: 3px dotted #d6b1ff;
+        border-top: 3px dotted orange;
 
         @media (max-width: 768px) {
           height: 100%;
           width: 1px;
           border-top: none;
-          border-right: 3px dotted #d6b1ff;
+          border-right: 3px dotted red;
         }
       }
     }
@@ -83,8 +83,8 @@
     justify-content: space-between;
     max-width: 100%;
     padding: 72px 80px 66px 80px;
-    background: linear-gradient(97.01deg, #9290f5 -4.32%, #3736be 89.23%);
-    box-shadow: 0 3px 34px rgba(157, 92, 221, 0.4);
+    background: linear-gradient(97.01deg, orange -4.32%, orangered 89.23%);
+    box-shadow: 0 3px 34px rgba(124, 68, 4, 0.4);
     border-radius: 20px;
     color: white;
     overflow: hidden;
@@ -138,18 +138,47 @@
       flex-direction: column;
       grid-gap: 16px;
       z-index: 2;
-
+      :global{
+        .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+          height: 50px;
+          border-radius: 34px;
+          background: orange;
+          border: none;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 33px;
+          outline: none;  
+        }
+      }
       input {
-        background: #8280eb;
         border-radius: 34px;
-        padding: 11px 32px;
+        padding: 20px 50px;
         border: none;
         color: rgba(255, 255, 255, 0.8);
         font-style: normal;
-        font-weight: 600;
         font-size: 16px;
         line-height: 33px;
         outline: none;
+      }
+      h5{
+        margin-top: 25px;
+        margin-left: 10px;
+        font-size: 20px;
+      }
+      .radio{
+        align-items: center;
+        display: flex;
+        margin-left: 10px;
+        label{
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 33px;
+        }
+        .driver{
+          margin-left: 20px;
+        }
       }
 
       input::placeholder {
@@ -170,15 +199,15 @@
         line-height: 25px;
         text-align: center;
         background: #ffffff;
-        box-shadow: 0 3px 67px rgb(157 92 221 / 40%),
+        box-shadow: 0 3px 67px rgba(228, 125, 8, 0.4),
           inset 1px 0 8px rgb(0 0 0 / 29%);
         border-radius: 40px;
         border: none;
         cursor: pointer;
-        color: #3736be;
+        color: orange;
 
         &:active {
-          box-shadow: 0 3px 67px rgba(157, 92, 221, 0.4),
+          box-shadow: 0 3px 67px rgba(180, 99, 6, 0.4),
             inset 7px -5px 8px rgba(0, 0, 0, 0.29);
         }
 

@@ -65,11 +65,6 @@ const menuItems = [
     link: "/#contacts",
   },
   {
-    id: "mainMenuItem-4",
-    title: "EXPERTISE",
-    link: "/#expertise",
-  },
-  {
     id: "mainMenuItem-5",
     title: "SOLUTIONS",
     link: "/#solutions",

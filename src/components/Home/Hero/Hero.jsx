@@ -18,7 +18,7 @@ const Hero = ({ ref }) => {
           <div className={style.videoBgHolder}>
             <div/>
             <video autoPlay loop muted>
-              <source src="/giphyscaled.mp4" type="video/mp4" />
+              <source src="/vid.mp4" type="video/mp4" />
             </video>
           </div>
         </div>

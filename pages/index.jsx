@@ -6,7 +6,6 @@ import Slider from '../src/components/Home/Slider/SliderBlock';
 import PreFooter from '../src/components/Home/PreFooter/PreFooter';
 import React from 'react';
 import Hero from '../src/components/Home/Hero/Hero';
-import Expertise from '../src/components/Home/Expertise/Expertise';
 import Analytics from '../src/components/Home/Analytics/Analytics';
 
 function Home() {
@@ -16,10 +15,8 @@ function Home() {
       <About />
       <Services />
       <Solutions />
-      <Expertise />
       <Analytics />
       <Slider />
-      {/*<Technologies />*/}
       <PreFooter />
     </MainLayout>
   );
