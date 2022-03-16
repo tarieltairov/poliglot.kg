@@ -1,6 +1,7 @@
 .main {
   padding: 100px 0;
-
+  width: 100%;
+  height: auto;
   .block {
     display: grid;
     grid-template: 1fr / 1fr 470px;
@@ -133,7 +134,7 @@
 
     .secondBlock {
       position: relative;
-      width: 100%;
+      width: 100% !important;
       height: 100%;
       display: flex;
       justify-content: center;

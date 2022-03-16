@@ -11,12 +11,18 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper';
 import truck1 from "../../../assets/new/truck1.jpg"
 import truck2 from "../../../assets/new/truck2.jpg"
+import { Carousel } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const About = () => {
   const [open, setOpen] = useState(false);
   const isLaptop = useMediaQuery({ query: "(max-width: 992px)" });
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const [index, setIndex] = useState(0);
 
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
   useEffect(() => {
     if (open) {
       document.body.style.overflow = "hidden";
@@ -66,24 +72,18 @@ const About = () => {
             </div>
             <div className={style.content}>
               <h4>
-                ZettaSoft IO automates, optimizes your business processes and
-                engineers your startup ideas into the MVP.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi velit suscipit error est magnam, modi unde corrupti ullam numquam odio, quos ipsum sunt itaque sit magni aspernatur esse quisquam dicta!
               </h4>
               <div className={style.contentBlock}>
                 <Image src={BoltIcon} />
                 <p>
-                  ZettaSoft collaborates with companies of all sizes, acting as
-                  a reliable partner in software and platform development,
-                  consultations, and product systems support services.{" "}
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias natus id nulla quibusdam perspiciatis voluptates dicta unde eveniet adipisci repellat, esse, harum sint doloribus voluptate incidunt commodi, facere nostrum assumenda.
                 </p>
               </div>
               <div className={style.contentBlock}>
                 <Image src={BoltIcon} />
                 <p>
-                  {" "}
-                  We create unique experiences and IT solutions for your
-                  business to help you continuously exceed your customers’
-                  expectations.{" "}
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, repellendus sit aperiam iure, dolore impedit eius ullam cumque tempora incidunt sunt libero expedita, fuga voluptas fugiat? Distinctio, dolore odio. Quasi.
                 </p>
               </div>
             </div>
@@ -91,10 +91,6 @@ const About = () => {
               <a href="/#contacts">
                 <button>Contact Us</button>
               </a>
-              {/* <div onClick={() => setOpen(true)} className={style.watch}>
-                <Image height={52} width={58} src={PlayIcon} />
-                <span>Watch video</span>
-              </div> */}
               <div className={style.watchArrow}>
                 <MediaQuery minWidth={1200}>
                   <svg
@@ -110,59 +106,27 @@ const About = () => {
                     />
                   </svg>
                 </MediaQuery>
-
-                <MediaQuery maxWidth={1200}>
-                  <svg
-                    width="22"
-                    height="69"
-                    viewBox="0 0 22 69"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M20.1305 33.0293L21.1212 33.1653L20.1305 33.0293ZM2.78203 67.858C2.90222 68.397 3.43663 68.7366 3.97568 68.6164L12.76 66.6579C13.299 66.5377 13.6386 66.0033 13.5184 65.4642C13.3982 64.9252 12.8638 64.5856 12.3248 64.7058L4.51649 66.4467L2.77558 58.6384C2.6554 58.0994 2.12098 57.7598 1.58194 57.88C1.04289 58.0002 0.70333 58.5346 0.823514 59.0737L2.78203 67.858ZM18.6841 1.00016C17.7022 1.18968 17.7022 1.18962 17.7022 1.18963C17.7022 1.18972 17.7022 1.1898 17.7023 1.18999C17.7023 1.19036 17.7025 1.191 17.7026 1.19191C17.703 1.19373 17.7035 1.19661 17.7043 1.20055C17.7058 1.20844 17.7081 1.22056 17.7112 1.23682C17.7173 1.26936 17.7265 1.3185 17.7385 1.38361C17.7625 1.51383 17.7977 1.70789 17.8419 1.96065C17.9304 2.46621 18.0549 3.20646 18.1985 4.14035C18.4856 6.00857 18.8484 8.64947 19.1501 11.7353C19.7548 17.92 20.1084 25.8377 19.1398 32.8933L21.1212 33.1653C22.1209 25.8829 21.7513 17.786 21.1407 11.5407C20.8347 8.41144 20.4668 5.73344 20.1753 3.8365C20.0294 2.88782 19.9026 2.13393 19.812 1.616C19.7667 1.35702 19.7304 1.15699 19.7054 1.02106C19.6929 0.953094 19.6831 0.901147 19.6765 0.865864C19.6731 0.848222 19.6706 0.834745 19.6688 0.825514C19.6679 0.820898 19.6672 0.817344 19.6668 0.814861C19.6665 0.81362 19.6663 0.812647 19.6662 0.811942C19.6661 0.81159 19.6661 0.811264 19.666 0.811088C19.666 0.810829 19.666 0.810638 18.6841 1.00016ZM19.1398 32.8933C18.7713 35.578 17.5975 39.052 15.999 42.8042C14.4078 46.5397 12.4249 50.4844 10.4831 54.0909C8.54241 57.6954 6.64896 60.9507 5.24035 63.3053C4.53624 64.4823 3.95375 65.4334 3.54768 66.0897C3.34466 66.4178 3.18577 66.6721 3.07787 66.8441C3.02393 66.9301 2.98272 66.9954 2.95513 67.0391C2.94134 67.061 2.93094 67.0774 2.92405 67.0883C2.92061 67.0937 2.91805 67.0977 2.91637 67.1004C2.91553 67.1017 2.91492 67.1027 2.91453 67.1033C2.91433 67.1036 2.91421 67.1038 2.91411 67.104C2.91404 67.1041 2.91403 67.1041 3.75807 67.6404C4.60211 68.1766 4.60221 68.1765 4.60237 68.1762C4.60249 68.176 4.60271 68.1757 4.60296 68.1753C4.60347 68.1745 4.60421 68.1733 4.60517 68.1718C4.60709 68.1688 4.60989 68.1644 4.61358 68.1585C4.62096 68.1469 4.63185 68.1297 4.64615 68.107C4.67475 68.0618 4.71698 67.9948 4.77198 67.9071C4.88198 67.7318 5.04309 67.4739 5.24844 67.142C5.65911 66.4783 6.24684 65.5186 6.95667 64.3321C8.37594 61.9596 10.2853 58.6772 12.2441 55.039C14.2019 51.4027 16.2153 47.3997 17.8391 43.5881C19.4556 39.7932 20.7155 36.1208 21.1212 33.1653L19.1398 32.8933Z"
-                      fill="#3A39C0"
-                    />
-                  </svg>
-                </MediaQuery>
               </div>
             </div>
           </div>
           <motion.div animate={animateShadow} className={style.shadow} />
 
-          {/* slider */}
-          <div className={`sliderWrapper ${style.secondBlock}`}>
-            <div className={'prev'}>
-              <Image src={ArrowLeft} />
-            </div>
-            <Swiper
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
-              autoHeight={true}
-              spaceBetween={20}
-              navigation={{
-                nextEl: '.next',
-                prevEl: '.prev',
-              }}
-              pagination={{
-                clickable: true,
-              }}
-              modules={[ Autoplay, Navigation, Pagination]}
-              className='mySwiper'
-            >
-              <SwiperSlide className={style.slider}>
-                <Image src={truck1} width={1000} height={700} />
-              </SwiperSlide>
-              <SwiperSlide className={style.slider}>
-                <Image src={truck2} width={1000} height={700} />
-              </SwiperSlide>
-            </Swiper>
-            <div className={'next'}>
-              <Image src={ArrowRight} />
-            </div>
-          </div>
+          <Carousel activeIndex={index} onSelect={handleSelect}>
+            <Carousel.Item>
+              <Image src={truck1} />
+              <Carousel.Caption>
+                <h3>First slide label</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <Image src={truck2} />
+              <Carousel.Caption>
+                <h3>Second slide label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          </Carousel>
 
         </div>
       </div>

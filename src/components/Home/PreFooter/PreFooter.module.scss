@@ -60,3 +60,17 @@
   border: none;
   margin-bottom: 105px;
 }
+
+@media (max-width: 320px) {
+  .whiteBlock h2 {
+    max-width: 300px;
+    font-size: 25px;
+    line-height: 37px;
+    margin-bottom: 20px;
+  }
+  .whiteBlock p {
+    max-width: 325px;
+    line-height: 23px;
+    font-size: 20px;
+  }
+}

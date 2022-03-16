@@ -5,7 +5,18 @@
   display: flex;
   align-items: center;
   z-index: 1;
-
+@media (max-width:768px){
+  height: 425px;
+}
+@media (max-width:425px){
+  height: 230px;
+}
+@media (max-width:375px){
+  height: 210px;
+}
+@media (max-width:320px){
+  height: 175px;
+}
   .videoWrapper {
     z-index: 2;
     height: 100%;
@@ -22,9 +33,6 @@
 
     .videoBgHolder {
       position: relative;
-      @media (max-width: 768px) {
-        transform: translateX(-50%);
-      }
 
       div {
         position: absolute;
@@ -35,7 +43,7 @@
 
       video {
         z-index: 1;
-        height: 100%;
+        height: auto;
         width: 100vw;
         opacity: 0.5;
       }
@@ -99,5 +107,20 @@
   @media (max-width: 768px) {
     font-size: 16px;
     line-height: 20px;
+  }
+}
+
+
+@media all and (max-width: 425px){
+  .content{
+    h4{
+      display: none;
+    }
+  }
+  .main {
+    margin-top: 80px;
+    height: 0px;
+    z-index: 3;
+    width: 100%;
   }
 }

@@ -14,7 +14,7 @@ const Header = ({ inView }) => {
       <div className={`container`}>
         <div className={style.header}>
           <div className={style.logo}>
-            <Image width={80} height={80} src={Logo} />
+            <Image width={75} height={75} src={Logo} className={style.logo_image}/>
             <h2>Ta Trains Inc</h2>
           </div>
           <MainMenu />

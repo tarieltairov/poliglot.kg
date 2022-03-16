@@ -122,3 +122,13 @@
   line-height: 30px;
   color: #afb5c0;
 }
+
+
+@media all and (max-width: 768px) {
+  .footerHr{
+    display: none;
+  }
+  .footerText{
+    display: none;
+  }
+}
