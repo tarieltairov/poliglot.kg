@@ -37,11 +37,7 @@ const Slider = () => {
           >
             <SwiperSlide className={style.slider}>
               <p>
-                ZettaSoft has satisfied complex requirements and proactively met
-                expectations to ensure accurate implementation. You can expect a
-                dedicated and punctual partner. We are satisfied with the result
-                of our cooperation, and we do recommend the company ZettaSoft as
-                responsible executor.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut qui adipisci facere explicabo similique aliquam, harum eius doloremque reprehenderit autem. Laudantium voluptate iure tenetur sunt rem? Ipsa quisquam excepturi recusandae.
               </p>
               <div className={style.hr} />
               <h3>Verto</h3>
@@ -115,11 +111,7 @@ const Slider = () => {
             </SwiperSlide>
             <SwiperSlide className={style.slider}>
               <p>
-                ZettaSoft has satisfied complex requirements and proactively met
-                expectations to ensure accurate implementation. You can expect a
-                dedicated and punctual partner. We are satisfied with the result
-                of our cooperation, and we do recommend the company ZettaSoft as
-                responsible executor.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut qui adipisci facere explicabo similique aliquam, harum eius doloremque reprehenderit autem. Laudantium voluptate iure tenetur sunt rem? Ipsa quisquam excepturi recusandae.
               </p>
               <hr />
               <h3>Verto</h3>
@@ -194,11 +186,7 @@ const Slider = () => {
             </SwiperSlide>
             <SwiperSlide className={style.slider}>
               <p>
-                ZettaSoft has satisfied complex requirements and proactively met
-                expectations to ensure accurate implementation. You can expect a
-                dedicated and punctual partner. We are satisfied with the result
-                of our cooperation, and we do recommend the company ZettaSoft as
-                responsible executor.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut qui adipisci facere explicabo similique aliquam, harum eius doloremque reprehenderit autem. Laudantium voluptate iure tenetur sunt rem? Ipsa quisquam excepturi recusandae.
               </p>
               <hr />
               <h3>Verto</h3>

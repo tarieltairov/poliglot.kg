@@ -124,7 +124,7 @@ export const MainMenu = () => {
               target="_blank"
               href="mailto: hello@zettasoft.io"
             >
-              hello@zettasoft.io
+              hello@example.io
             </a>
             <a
               rel="noreferrer noopener"

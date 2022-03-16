@@ -7,8 +7,7 @@ const PreFooter = () => {
       <div className={style.whiteBlock}>
         <h2>Let’s Work Together</h2>
         <p>
-          We’re looking forward to discussing your projects and how we can help
-          you!
+          Lorem ipsum dolor sit amet consectetur
         </p>
         <a href="/#contacts">
           <button>Contact Us</button>

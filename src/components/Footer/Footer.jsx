@@ -15,7 +15,7 @@ const Footer = () => {
           <div className={style.blockFooter}>
             <div className={style.logoBlock}>
               <Image width={33} height={36} src={Logo} />
-              <h2>ZettaSoft</h2>
+              <h2>ttttttttt</h2>
             </div>
             <p>
               We offer innovative solutions <br />
@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
           <div className={style.blockFooter}>
             <h3>Contacts</h3>
-            <a href="mailto: hello@zettasoft.io">hello@zettasoft.io</a>
+            <a href="mailto: hello@zettasoft.io">lorem</a>
             <a
               rel="noreferrer noopener"
               target="_blank"
@@ -81,7 +81,6 @@ const Footer = () => {
         </div>
         <div className={style.footerHr} />
         <div className={style.footerText}>
-          <p>© Copyright ZettaSoft LLC. All Rights Reserved 2022</p>
         </div>
       </div>
     </footer>

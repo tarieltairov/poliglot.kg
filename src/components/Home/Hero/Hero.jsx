@@ -8,10 +8,10 @@ const Hero = ({ ref }) => {
         <div className={style.main}>
           <div className={style.content}>
             <h1>
-              <span>Build</span>, scale and control your <span>business</span>{" "}
-              with us!
+            Ta Trains Inc
+
             </h1>
-            <h4>#We offer innovative solutions for your actual problems</h4>
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam inventore adipisci ratione fugit, asperiores assumenda. Dignissimos velit, quia accusantium fuga asperiores voluptates autem hic dolor iste, quasi in laudantium quaerat.</h4>
           </div>
         </div>
         <div className={style.videoWrapper}>
