@@ -41,7 +41,7 @@ export const Navigation = ({ toggle }) => (
         key={id}
       >
         <Link href={link}>
-          <a>{title}</a>
+          <a style={{textDecoration: 'none'}}>{title}</a>
         </Link>
       </motion.li>
     ))}

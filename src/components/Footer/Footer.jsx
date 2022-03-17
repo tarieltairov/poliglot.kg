@@ -1,10 +1,8 @@
 import React from "react";
 import style from "./Footer.module.scss";
-import Logo from "../../assets/svg/logo.svg";
+import Lofo from "../../assets/new/logo.png"
+import Insta from "../../assets/new/insta.png"
 import LinkedinIcon from "../../assets/svg/Icon-Linkedin.svg";
-import BehanceIcon from "../../assets/svg/Icon-behance.svg";
-import ClutchIcon from "../../assets/svg/Icon-Clutch.svg";
-import UpWorkIcon from "../../assets/svg/Icon-Upwork.svg";
 import Image from "next/image";
 
 const Footer = () => {
@@ -14,8 +12,8 @@ const Footer = () => {
         <div className={style.blocks}>
           <div className={style.blockFooter}>
             <div className={style.logoBlock}>
-              <Image width={33} height={36} src={Logo} />
-              <h2>ttttttttt</h2>
+              <Image width={33} height={36} src={Lofo} />
+              <h2>Ta Trains Inc</h2>
             </div>
             <p>
               We offer innovative solutions <br />
@@ -49,32 +47,9 @@ const Footer = () => {
               <a
                 rel="noreferrer noopener"
                 target="_blank"
-                href="https://www.linkedin.com/company/zettasoft/"
+                href="https://www.instagram.com/"
               >
-                <Image src={LinkedinIcon} />
-              </a>
-              <a
-                rel="noreferrer noopener"
-                target="_blank"
-                href="https://www.behance.net/?tracking_source=typeahead_search_direct&search=zettasoft"
-              >
-                <Image src={BehanceIcon} />
-              </a>
-            </div>
-            <div className={style.social}>
-              <a
-                rel="noreferrer noopener"
-                target="_blank"
-                href="https://clutch.co/profile/zettasoft-io"
-              >
-                <Image src={ClutchIcon} />
-              </a>
-              <a
-                rel="noreferrer noopener"
-                target="_blank"
-                href="https://www.upwork.com/agencies/~01112f88a7f260f6aa"
-              >
-                <Image src={UpWorkIcon} />
+                <Image src={Insta} width={50} height={50}/>
               </a>
             </div>
           </div>
