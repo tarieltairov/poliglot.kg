@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import style from "./Header.module.scss";
 import Logo from "../../assets/new/logo.png";
 import Image from "next/image";

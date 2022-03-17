@@ -8,8 +8,8 @@ import Image from "next/image";
 import LinkedinIcon from "../../../assets/svg/Icon-Linkedin.svg";
 import BehanceIcon from "../../../assets/svg/Icon-behance.svg";
 import ClutchIcon from "../../../assets/svg/Icon-Clutch.svg";
+import Insta from "../../../assets/new/insta.png"
 import UpWorkIcon from "../../../assets/svg/Icon-Upwork.svg";
-
 const footerVariants = {
   open: {
     y: 0,
@@ -90,31 +90,18 @@ export const MainMenu = () => {
             <a
               rel="noreferrer noopener"
               target="_blank"
-              href="https://www.linkedin.com/company/zettasoft/"
+              href="https://www.instagram.com/"
             >
-              <Image src={LinkedinIcon} />
-            </a>
-            <a
-              rel="noreferrer noopener"
-              target="_blank"
-              href="https://www.behance.net/?tracking_source=typeahead_search_direct&search=zettasoft"
-            >
-              <Image src={BehanceIcon} />
+              <Image src={Insta} width={50} height={50} className="insta"/>
             </a>
 
             <a
               rel="noreferrer noopener"
               target="_blank"
-              href="https://clutch.co/profile/zettasoft-io"
+              href="/"
+              style={{textDecoration: "none", color: "white", marginTop: "5px"}}
             >
-              <Image src={ClutchIcon} />
-            </a>
-            <a
-              rel="noreferrer noopener"
-              target="_blank"
-              href="https://www.upwork.com/agencies/~01112f88a7f260f6aa"
-            >
-              <Image src={UpWorkIcon} />
+              <h3>Ta Trains Inc</h3>
             </a>
           </div>
 
@@ -122,7 +109,7 @@ export const MainMenu = () => {
             <a
               rel="noreferrer noopener"
               target="_blank"
-              href="mailto: hello@zettasoft.io"
+              href="#"
             >
               hello@example.io
             </a>

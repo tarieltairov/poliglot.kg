@@ -92,26 +92,50 @@ button {
   cursor: pointer;
 }
 
+  .MuiOutlinedInput-root{
+    height: 50px;
+    border-radius: 34px;
+    background: pink;
+    opacity: 0.5;
+    border: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 33px;
+    outline: none;  
+    margin-top: 10px;
+  }
 
-.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root{
+.MuiInputLabel-root{
   color: rgba(255, 255, 255, 0.8);
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
 }
 
-.css-1sumxir-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{
+.MuiInputLabel-root.Mui-focused{
   color: rgba(255, 255, 255, 0.8);
   font-size: 17px;  
 }
 
-.css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked{
+.MuiRadio-root.Mui-checked{
   color: white;
 }
-.css-vqmohf-MuiButtonBase-root-MuiRadio-root{
+.MuiRadio-root{
   color: white;
 }
 
+ .solutions_inputBlock__sc7Lc input{
+color: black !important;
+font-size: 20px !important;
+}
 .swiper-pagination-bullet{
   background-color: orange !important; 
+}
+
+.carousel-indicators [data-bs-target]{
+  background-color: orange !important;
+}
+.carousel-item span{
+  border-radius: 30px !important;
 }

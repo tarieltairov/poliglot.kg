@@ -176,3 +176,14 @@
   top: 0;
   left: 0;
 }
+
+.slider{
+  margin-top: 150px;
+  @media (max-width: 1024px){
+    margin-bottom: 150px !important;
+  }
+  @media (max-width: 768px){
+    margin: 0px !important;
+  }
+}
+

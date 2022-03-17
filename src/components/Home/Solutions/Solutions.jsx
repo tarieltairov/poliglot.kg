@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./solutions.module.scss";
 import DottedSqIcon from "../../../assets/svg/Icon-dottedSQ.svg";
 import Image from "next/image";
@@ -7,15 +7,29 @@ import ContentHeadTitle from "../../components/ContentHeadTitlte/ContentHeadTitl
 import { TextField } from "@mui/material";
 import Radio from '@mui/material/Radio';
 const Solutions = () => {
-
-  const [selectedValue, setSelectedValue] = React.useState('a');
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [year, setYear] = useState('')
+  const [phone, setPhone] = useState('')
+  const [selectedValue, setSelectedValue] = useState('');
+  const data = {
+    name: name,
+    email: email,
+    year: year,
+    number: phone,
+    position: selectedValue
+  }
 
   const handleChange = (event) => {
     setSelectedValue(event.target.value);
   };
+  const sendToServer = () => {
+    console.log(data)
+  }
+
   return (
     <div id={"solutions"} className="container">
-      <div id="contacts" className={style.solutions}>
+      <div className={style.solutions}>
         <div className={style.heading}>
           <ContentHeadTitle title={"QUICK PROJECT START"} centered />
         </div>
@@ -39,7 +53,7 @@ const Solutions = () => {
                   />
                   <path
                     d="M31 46.4962C27.9663 46.4962 25.0143 46.2537 22.1729 45.9301C20.5315 45.7432 19.1598 44.5438 18.8933 42.9134C18.6244 41.2688 18.5 39.5672 18.5 37.2161C18.5 34.8651 18.6244 33.1636 18.8933 31.519C19.1598 29.8886 20.5315 28.6893 22.1729 28.5023C25.0143 28.1787 27.9663 27.9362 31 27.9362C34.0337 27.9362 36.9857 28.1787 39.8271 28.5023C41.4685 28.6893 42.8402 29.8886 43.1067 31.519C43.3756 33.1636 43.5 34.8651 43.5 37.2161C43.5 39.5672 43.3756 41.2688 43.1067 42.9134C42.8402 44.5438 41.4685 45.7432 39.8271 45.9301C36.9857 46.2537 34.0337 46.4962 31 46.4962Z"
-                    fill="pink"
+                    fill="#FFE0D7"
                   />
                   <path
                     d="M22.1729 28.502C20.5315 28.6889 19.1598 29.8882 18.8933 31.5187C18.6244 33.1632 18.5 34.8647 18.5 37.2158C18.5 39.5668 18.6244 41.2684 18.8933 42.913C19.1598 44.5435 20.5315 45.7428 22.1729 45.9298C25.0143 46.2534 27.9663 46.4958 31 46.4958C34.0337 46.4958 36.9857 46.2534 39.8271 45.9298C41.4685 45.7428 42.8402 44.5435 43.1067 42.913C43.3756 41.2684 43.5 39.5668 43.5 37.2158C43.5 34.8647 43.3756 33.1632 43.1067 31.5187C42.8402 29.8882 41.4685 28.6889 39.8271 28.502"
@@ -96,7 +110,7 @@ const Solutions = () => {
                   />
                   <path
                     d="M31 46.5C37.9036 46.5 43.5 40.9036 43.5 34C43.5 27.0964 37.9036 21.5 31 21.5C24.0964 21.5 18.5 27.0964 18.5 34C18.5 40.9036 24.0964 46.5 31 46.5Z"
-                    fill="pink"
+                    fill="#FFE0D7"
                     stroke="orange"
                     strokeWidth="2.74988"
                     strokeLinecap="round"
@@ -138,7 +152,7 @@ const Solutions = () => {
                   />
                   <path
                     d="M41.7476 42.1677C41.913 39.5313 42 36.7994 42 34C42 32.8662 41.9857 31.7435 41.9578 30.6338C41.9381 29.8541 41.6853 29.0965 41.2238 28.4678C39.4649 26.0716 38.0635 24.5818 35.7542 22.7995C35.1196 22.3097 34.3408 22.044 33.5394 22.0265C32.7357 22.0089 31.8965 22 31 22C28.2861 22 26.0969 22.0817 23.8314 22.2375C21.9041 22.37 20.3735 23.9043 20.2524 25.8323C20.087 28.4687 20 31.2006 20 34C20 36.7994 20.087 39.5313 20.2524 42.1677C20.3735 44.0957 21.9041 45.63 23.8314 45.7625C26.0969 45.9183 28.2861 46 31 46C33.7139 46 35.9031 45.9183 38.1686 45.7625C40.0959 45.63 41.6265 44.0957 41.7476 42.1677Z"
-                    fill="pink"
+                    fill="#FFE0D7"
                     stroke="orange"
                   />
                   <path
@@ -153,7 +167,7 @@ const Solutions = () => {
                   />
                   <path
                     d="M27.1875 38.3437C26.3591 38.3437 25.6875 39.0153 25.6875 39.8437C25.6875 40.6721 26.3591 41.3437 27.1875 41.3437V38.3437ZM34.7888 41.3437C35.6172 41.3437 36.2888 40.6721 36.2888 39.8437C36.2888 39.0153 35.6172 38.3437 34.7888 38.3437V41.3437ZM27.1875 26.5C26.3591 26.5 25.6875 27.1716 25.6875 28C25.6875 28.8284 26.3591 29.5 27.1875 29.5V26.5ZM31.7888 29.5C32.6172 29.5 33.2888 28.8284 33.2888 28C33.2888 27.1716 32.6172 26.5 31.7888 26.5V29.5ZM27.1875 41.3437H34.7888V38.3437H27.1875V41.3437ZM27.1875 29.5H31.7888V26.5H27.1875V29.5Z"
-                    fill="pink"
+                    fill="#FFE0D7"
                     stroke="orange"
                   />
                 </svg>
@@ -219,7 +233,7 @@ const Solutions = () => {
                   />
                   <path
                     d="M37.6944 34.4596C37.7027 33.2646 37.3909 32.0892 36.7915 31.0554C36.1921 30.0216 35.3269 29.1671 34.2858 28.5806C33.2446 27.9941 32.0655 27.6969 30.8707 27.72C29.6759 27.7431 28.5091 28.0855 27.4914 28.7118C26.4737 29.3381 25.6421 30.2254 25.0831 31.2816C24.5241 32.3378 24.258 33.5243 24.3124 34.7181C24.3668 35.9118 24.7397 37.0693 25.3925 38.0702C26.5581 39.8576 27.2482 40.5147 27.2482 42.6418C27.2482 42.8391 27.3266 43.0283 27.4661 43.1678C27.6056 43.3073 27.7948 43.3857 27.9921 43.3857H34.0076C34.2049 43.3857 34.3941 43.3073 34.5336 43.1678C34.6731 43.0283 34.7514 42.8391 34.7514 42.6418C34.7514 40.4634 35.5235 39.8168 36.6814 37.964C37.3384 36.9128 37.6892 35.6992 37.6944 34.4596Z"
-                    fill="pink"
+                    fill="#FFE0D7"
                     stroke="orange"
                     strokeWidth="3"
                     strokeLinecap="round"
@@ -239,43 +253,41 @@ const Solutions = () => {
             </div>
           </div>
         </div>
-        <div className={style.projectBlock}>
+        <div id="contacts" className={style.projectBlock}>
           <div className={style.titleBlock}>
             <h2>Have a project?</h2>
             <p>Let’s contact with us!</p>
           </div>
           <div className={style.inputBlock}>
             <div className={style.inputBlock_first}>
-              <TextField id="Name" label="Name" variant="outlined" />
-              <TextField id="Email" label="Email" variant="outlined" />
+              <TextField id="Name" label="Name" variant="outlined" onChange={(e) => setName(e.target.value)} />
+              <TextField id="Email" label="Email" variant="outlined" onChange={(e) => setEmail(e.target.value)} />
             </div>
             <div className={style.inputBlock_second}>
-              <TextField id="Years" label="Years of Experience" variant="outlined" />
-              <TextField id="Phone number" label="Phone number" variant="outlined" />
+              <TextField id="Years" label="Years of Experience" variant="outlined" onChange={(e) => setYear(e.target.value)} />
+              <TextField id="Phone number" label="Phone number" variant="outlined" onChange={(e) => setPhone(e.target.value)} />
             </div>
             <h5>Position</h5>
             <div className={style.inputBlock_footer}>
               <div className={style.radio}>
                 <label htmlFor="radio-buttons">Owner Operator</label>
                 <Radio
-                  checked={selectedValue === 'a'}
+                  checked={selectedValue === 'Owner Operator'}
                   onChange={handleChange}
-                  value="a"
+                  value="Owner Operator"
                   name="radio-buttons"
                   inputProps={{ 'aria-label': 'A' }}
                 />
                 <label htmlFor="radio-buttons" className={style.driver}>Driver</label>
                 <Radio
-                  checked={selectedValue === 'b'}
+                  checked={selectedValue === 'Driver'}
                   onChange={handleChange}
-                  value="b"
+                  value="Driver"
                   name="radio-buttons"
                   inputProps={{ 'aria-label': 'B' }}
                 />
               </div>
-              <a href="/#contacts">
-                <button>Apply</button>
-              </a>
+              <button onClick={() => sendToServer()}>Apply</button>
             </div>
           </div>
           <div className={style.rightDotted}>

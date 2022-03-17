@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 
 export default function MainLayout({ children }) {
   const [inView, setInView] = useState(true);
-
   useEffect(() => {
     window.addEventListener("scroll", () => {
       const { innerHeight, pageYOffset } = window;

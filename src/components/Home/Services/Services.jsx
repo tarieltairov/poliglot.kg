@@ -59,7 +59,7 @@ const Services = () => {
                 fill="none"
               />
             </svg>
-            <h2>Web Platforms</h2>
+            <h2 style={{marginTop: "40px"}}>Web Platforms</h2>
             <p>
               E-commerce, E-learning,
               <br /> CRM systems, Admin dashboards
@@ -89,7 +89,7 @@ const Services = () => {
                 fill="#6462D9"
               />
             </svg>
-            <h2>Mobile Application</h2>
+            <h2 style={{marginTop: "40px"}}>Mobile Application</h2>
             <p>
               Cross platform mobile applications for <br /> IOS and Android
             </p>
