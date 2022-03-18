@@ -260,11 +260,11 @@ const Solutions = () => {
           </div>
           <div className={style.inputBlock}>
             <div className={style.inputBlock_first}>
-              <TextField id="Name" label="Name" variant="outlined" onChange={(e) => setName(e.target.value)} />
+              <TextField id="Name" label="Name" variant="outlined" onChange={(e) => setName(e.target.value)} className={style.io} />
               <TextField id="Email" label="Email" variant="outlined" onChange={(e) => setEmail(e.target.value)} />
             </div>
             <div className={style.inputBlock_second}>
-              <TextField id="Years" label="Years of Experience" variant="outlined" onChange={(e) => setYear(e.target.value)} />
+              <TextField id="Years" label="Years of Experience" variant="outlined" onChange={(e) => setYear(e.target.value)} className={style.io}/>
               <TextField id="Phone number" label="Phone number" variant="outlined" onChange={(e) => setPhone(e.target.value)} />
             </div>
             <h5>Position</h5>
