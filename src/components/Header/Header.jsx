@@ -4,7 +4,7 @@ import Logo from "../../assets/new/logo.png";
 import Image from "next/image";
 import { MainMenu } from "./Menu/MainMenu";
 
-const Header = ({ inView }) => {
+const Header = ({inView }) => {
   return (
     <header
       className={`${style.mainHeader} ${
