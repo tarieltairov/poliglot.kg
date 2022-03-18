@@ -16,7 +16,6 @@ const Hero = ({ ref }) => {
         </div>
         <div className={style.videoWrapper}>
           <div className={style.videoBgHolder}>
-            <div/>
             <video autoPlay loop muted>
               <source src="/vid.mp4" type="video/mp4" />
             </video>

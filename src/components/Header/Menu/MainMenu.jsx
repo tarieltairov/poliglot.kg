@@ -53,9 +53,8 @@ export const MainMenu = () => {
 
   const sidebar = {
     open: (height = 1000) => ({
-      clipPath: `circle(${height * 2 + 200}px at ${
-        isSmallScreen ? "29.1px" : "88.5%"
-      } 30px)`,
+      clipPath: `circle(${height * 2 + 200}px at ${isSmallScreen ? "29.1px" : "88.5%"
+        } 30px)`,
       transition: {
         type: "spring",
         stiffness: 20,
@@ -92,14 +91,14 @@ export const MainMenu = () => {
               target="_blank"
               href="https://www.instagram.com/"
             >
-              <Image src={Insta} width={50} height={50} className="insta"/>
+              <Image src={Insta} width={50} height={50} className="insta" />
             </a>
 
             <a
               rel="noreferrer noopener"
               target="_blank"
               href="/"
-              style={{textDecoration: "none", color: "white", marginTop: "5px"}}
+              style={{ textDecoration: "none", color: "white", marginTop: "5px" }}
             >
               <h3>Ta Trains Inc</h3>
             </a>
@@ -110,10 +109,12 @@ export const MainMenu = () => {
               rel="noreferrer noopener"
               target="_blank"
               href="#"
+              style={{ color: 'white' }}
             >
               hello@example.io
             </a>
             <a
+              style={{ color: 'white' }}
               rel="noreferrer noopener"
               target="_blank"
               href="https://www.google.com/maps/place/Bishkek"
