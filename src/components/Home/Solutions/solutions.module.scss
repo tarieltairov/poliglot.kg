@@ -102,6 +102,9 @@
     }
 
     .titleBlock {
+      @media (max-width: 425px){
+        padding: 0 4px;
+      }
       text-align: center;
       h2 {
         font-style: normal;
@@ -131,6 +134,9 @@
     }
 
     .inputBlock {
+      @media (max-width: 425px){
+        padding: 0 20px;
+      }
       margin-top: 50px;
       width: 100%;
       display: flex;
