@@ -1,9 +1,7 @@
 import React from "react";
 import style from "./Header.module.scss";
-import Logo from "../../assets/new/logo.png";
-import Image from "next/image";
 import { MainMenu } from "./Menu/MainMenu";
-import { motion } from "framer-motion"
+import Link from "next/link";
 const Header = ({ inView }) => {
   return (
     <header
@@ -11,21 +9,28 @@ const Header = ({ inView }) => {
         }`}
     >
       <div className={`container`}>
-        < motion.div className={style.header}
-          initial='hidden'
-          whileInView='visible'
-          transition={{ duration: 0.5 }}
-          variants={{
-            visible: { opacity: 1, scale: 1 },
-            hidden: { opacity: 0, scale: 0 },
-          }}
+        <div className={style.header}
         >
           <div className={style.logo}>
-            <Image width={75} height={75} src={Logo} className={style.logo_image} />
-            <h2>Ta Trains Inc</h2>
+            <Link href="/">
+
+              <h2>TA TRANS INC</h2>
+            </Link>
           </div>
-          <MainMenu />
-        </ motion.div>
+
+          <div className={style.links}>
+            <Link href="/"><p>HOME</p></Link>
+            <Link href="/#about"><p>ABOUT US</p></Link>
+            <Link href="/#services"><p>SERVICES</p></Link>
+            <Link href="/#contacts"><p>CONTACT</p></Link>
+            <Link href="/#solutions"><p>SOLUTIONS</p></Link>
+          </div>
+          <div
+            className={style.burger}>
+
+            <MainMenu />
+          </div>
+        </div>
       </div>
     </header>
   );

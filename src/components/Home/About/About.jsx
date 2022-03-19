@@ -3,12 +3,8 @@ import style from "./About.module.scss";
 import BoltIcon from "../../../assets/svg/Icon-bolt.svg";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import MediaQuery, { useMediaQuery } from "react-responsive";
+import { useMediaQuery } from "react-responsive";
 import ContentHeadTitle from "../../components/ContentHeadTitlte/ContentHeadTitle";
-import ArrowLeft from '../../../assets/svg/Icon-leftArrow.svg';
-import ArrowRight from '../../../assets/svg/Icon-rightArrow.svg';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper';
 import truck1 from "../../../assets/new/truck1.jpg"
 import truck2 from "../../../assets/new/truck2.jpg"
 import { Carousel } from "react-bootstrap";
@@ -67,20 +63,50 @@ const About = () => {
       <div id={"about"} className="container">
         <div className={style.block}>
           <div className={style.firstBlock}>
-            <div className={style.heading}>
+            <div
+              initial='hidden'
+              whileInView='visible'
+              transition={{ duration: 0.5 }}
+              variants={{
+                visible: { opacity: 1, scale: 1 },
+                hidden: { opacity: 0, scale: 0 },
+              }} className={style.heading}>
               <ContentHeadTitle title={"ABOUT US"} />
             </div>
             <div className={style.content}>
-              <h4>
+              <h4
+                initial='hidden'
+                whileInView='visible'
+                transition={{ duration: 0.5 }}
+                variants={{
+                  visible: { opacity: 1, scale: 1 },
+                  hidden: { opacity: 0, scale: 0 },
+                }}
+              >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi velit suscipit error est magnam, modi unde corrupti ullam numquam odio, quos ipsum sunt itaque sit magni aspernatur esse quisquam dicta!
               </h4>
-              <div className={style.contentBlock}>
+              <div className={style.contentBlock}
+                initial='hidden'
+                whileInView='visible'
+                transition={{ duration: 0.5 }}
+                variants={{
+                  visible: { opacity: 1, x: 0 },
+                  hidden: { opacity: 0, x: -100 },
+                }}
+              >
                 <Image src={BoltIcon} />
                 <p>
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias natus id nulla quibusdam perspiciatis voluptates dicta unde eveniet adipisci repellat, esse, harum sint doloribus voluptate incidunt commodi, facere nostrum assumenda.
                 </p>
               </div>
-              <div className={style.contentBlock}>
+              <div className={style.contentBlock}
+                initial='hidden'
+                whileInView='visible'
+                transition={{ duration: 0.5 }}
+                variants={{
+                  visible: { opacity: 1, x: 0 },
+                  hidden: { opacity: 0, x: 100 },
+                }}>
                 <Image src={BoltIcon} />
                 <p>
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, repellendus sit aperiam iure, dolore impedit eius ullam cumque tempora incidunt sunt libero expedita, fuga voluptas fugiat? Distinctio, dolore odio. Quasi.
@@ -93,16 +119,24 @@ const About = () => {
               </a>
             </div>
           </div>
-          <motion.div animate={animateShadow} className={style.shadow} />
-
-          <Carousel activeIndex={index} onSelect={handleSelect} className={style.slider}>
-            <Carousel.Item>
-              <Image src={truck1} width={900} height={600} />
-            </Carousel.Item>
-            <Carousel.Item>
-              <Image src={truck2} width={900} height={600}/>
-            </Carousel.Item>
-          </Carousel>
+          <div animate={animateShadow} className={style.shadow} />
+          <div
+            initial='hidden'
+            whileInView='visible'
+            transition={{ duration: 0.5 }}
+            variants={{
+              visible: { opacity: 1, x: 0 },
+              hidden: { opacity: 0, x: 100 },
+            }}>
+            <Carousel activeIndex={index} onSelect={handleSelect} className={style.slider}>
+              <Carousel.Item>
+                <Image src={truck1} width={900} height={600} />
+              </Carousel.Item>
+              <Carousel.Item>
+                <Image src={truck2} width={900} height={600} />
+              </Carousel.Item>
+            </Carousel>
+          </div>
 
         </div>
       </div>

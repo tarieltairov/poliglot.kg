@@ -2,7 +2,6 @@ import React from "react";
 import style from "./Footer.module.scss";
 import Lofo from "../../assets/new/logo.png"
 import Insta from "../../assets/new/insta.png"
-import LinkedinIcon from "../../assets/svg/Icon-Linkedin.svg";
 import Image from "next/image";
 
 const Footer = () => {
@@ -26,12 +25,6 @@ const Footer = () => {
             <a href="/#services">Services</a>
             <a href="/#contacts">Contacts</a>
             <a href="/#solutions">Solutions</a>
-          </div>
-          <div className={style.blockFooter}>
-            <h3>Services</h3>
-            <a href="/">Web Platform</a>
-            <a href="/">Mobile Apps</a>
-            <a href="/#about">About Us</a>
           </div>
           <div className={style.blockFooter}>
             <h3>Contacts</h3>

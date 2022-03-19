@@ -1,28 +1,48 @@
-import React from "react";
+import { Carousel } from "react-bootstrap";
+import React, { useState } from "react";
 import style from "./Hero.module.scss";
-
+import Image from "next/image";
+import ft from "../../../assets/new/ft.jpg"
+import ft2 from "../../../assets/new/ft2.jpg"
+import truck1 from "../../../assets/new/truck1.jpg"
+import axios from "axios";
 const Hero = ({ ref }) => {
-  return (
-    <>
-      <div ref={ref} id={"home"} className={style.home}>
-        <div className={style.main}>
-          <div className={style.content}>
-            <h1>
-            Ta Trains Inc
+  const [index, setIndex] = useState(0);
 
-            </h1>
-            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam inventore adipisci ratione fugit, asperiores assumenda. Dignissimos velit, quia accusantium fuga asperiores voluptates autem hic dolor iste, quasi in laudantium quaerat.</h4>
-          </div>
-        </div>
-        <div className={style.videoWrapper}>
-          <div className={style.videoBgHolder}>
-            <video autoPlay loop muted>
-              <source src="/vid.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </div>
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
+  async function getText() {
+    try {
+      let res = await axios.get("https://kanatik6.pythonanywhere.com/admin/")
+      console.log(res)
+    } catch (error) {
+      console.log(e)
+    }
+  }
+  return (
+    <div className={style.hh}>
+      <div className={style.toto}>
+        <h1>Your adventure starts here</h1>
+        <p>Long-haul trucking that you can trust.</p>
+        <button onClick={()=>getText()}>
+          Apply now
+        </button>
       </div>
-    </>
+      <Carousel activeIndex={index} onSelect={handleSelect} className={style.slider}>
+        <Carousel.Item className={style.lol}>
+          <Image src={truck1} className={style.img} />
+          <Carousel.Caption>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item className={style.lol}>
+          <Image src={ft} className={style.img} />
+        </Carousel.Item>
+        <Carousel.Item className={style.lol}>
+          <Image src={ft2} className={style.img} />
+        </Carousel.Item>
+      </Carousel>
+    </div>
   );
 };
 
