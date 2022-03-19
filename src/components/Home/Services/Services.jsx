@@ -1,16 +1,34 @@
 import React from "react";
 import style from "./Services.module.scss";
 import ContentHeadTitle from "../../components/ContentHeadTitlte/ContentHeadTitle";
+import { motion } from "framer-motion";
 
 const Services = () => {
   return (
     <div id={"services"} className={style.services}>
       <div className="container">
-        <div className={style.heading}>
+        <motion.div className={style.heading}
+          initial='hidden'
+          whileInView='visible'
+          transition={{ duration: 0.5 }}
+          variants={{
+            visible: { opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0 },
+          }}>
           <ContentHeadTitle title={"OUR SERVICES"} centered />
-        </div>
-        <div className={style.blocks}>
-          <div className={`${style.block}`}>
+        </motion.div>
+        <div className={style.blocks}
+          initial='hidden'
+        >
+          <motion.div className={`${style.block}`}
+
+            initial='hidden'
+            whileInView='visible'
+            transition={{ duration: 0.5 }}
+            variants={{
+              visible: { opacity: 1, x: 0 },
+              hidden: { opacity: 0, x: -100 },
+            }}>
             <svg
               width="36"
               height="36"
@@ -59,14 +77,21 @@ const Services = () => {
                 fill="none"
               />
             </svg>
-            <h2 style={{marginTop: "40px"}}>Web Platforms</h2>
+            <h2 style={{ marginTop: "40px" }}>Web Platforms</h2>
             <p>
               E-commerce, E-learning,
               <br /> CRM systems, Admin dashboards
             </p>
             <a href="#"> Find out more </a>
-          </div>
-          <div className={`${style.block}`}>
+          </motion.div>
+          <motion.div className={`${style.block}`}
+            initial='hidden'
+            whileInView='visible'
+            transition={{ duration: 0.5 }}
+            variants={{
+              visible: { opacity: 1, x: 1 },
+              hidden: { opacity: 0, x: -100 },
+            }}>
             <svg
               width="32"
               height="32"
@@ -89,14 +114,22 @@ const Services = () => {
                 fill="#6462D9"
               />
             </svg>
-            <h2 style={{marginTop: "40px"}}>Mobile Application</h2>
+            <h2 style={{ marginTop: "40px" }}>Mobile Application</h2>
             <p>
               Cross platform mobile applications for <br /> IOS and Android
             </p>
             <a href="#"> Find out more </a>
-          </div>
+          </motion.div>
         </div>
-        <div className={style.miniBlocks}>
+        <motion.div className={style.miniBlocks}
+        initial='hidden'
+        whileInView='visible'
+        transition={{ duration: 0.5 }}
+        variants={{
+          visible: { opacity: 1, y: 1 },
+          hidden: { opacity: 0, y: 100 },
+        }}
+        >
           <div className={style.miniBlock}>
             <svg
               width="33"
@@ -218,9 +251,9 @@ const Services = () => {
             <p>Test your business idea with minimum valuable product</p>
             <a href="#"> Find out more </a>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </div >
   );
 };
 

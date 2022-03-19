@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import style from './analytics.module.scss';
-
+import {motion} from "framer-motion"
 function Analytics() {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
@@ -33,7 +33,16 @@ function Analytics() {
   return (
     <div className='container' ref={ref}>
       {inView && (
-        <div className={style.analytics}>
+        <motion.div className={style.analytics}
+
+          initial='hidden'
+          whileInView='visible'
+          transition={{ duration: 0.5 }}
+          variants={{
+            visible: { opacity: 1, y: 0 },
+            hidden: { opacity: 0, y: -100 },
+          }}
+        >
           <div className={style.analytics__wrapper}>
             <div className={style.analytics__violetText}>
               <div
@@ -67,7 +76,7 @@ function Analytics() {
               Of positive <br /> reviews
             </p>
           </div>
-        </div>
+        </motion.div>
       )}
     </div>
   );
