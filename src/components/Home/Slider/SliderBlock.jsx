@@ -10,15 +10,31 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import ContentHeadTitle from '../../components/ContentHeadTitlte/ContentHeadTitle';
-
+import { motion } from "framer-motion"
 const Slider = () => {
   return (
     <div className={style.slider_main}>
       <div className='container'>
-        <div className={style.heading}>
+        <motion.div className={style.heading}
+          initial='hidden'
+          whileInView='visible'
+          transition={{ duration: 0.5 }}
+          variants={{
+            visible: { opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0 },
+          }}
+        >
           <ContentHeadTitle title='WHAT OUR CLIENTS SAY' centered />
-        </div>
-        <div className={`sliderWrapper ${style.sliderWrapper}`}>
+        </motion.div>
+        <motion.div className={`sliderWrapper ${style.sliderWrapper}`}
+          initial='hidden'
+          whileInView='visible'
+          transition={{ duration: 0.5 }}
+          variants={{
+            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, x: 100 },
+          }}
+         >
           <div className={'prev'}>
             <Image src={ArrowLeft} />
           </div>
@@ -37,7 +53,7 @@ const Slider = () => {
           >
             <SwiperSlide className={style.slider}>
               <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut qui adipisci facere explicabo similique aliquam, harum eius doloremque reprehenderit autem. Laudantium voluptate iure tenetur sunt rem? Ipsa quisquam excepturi recusandae.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut qui adipisci facere explicabo similique aliquam, harum eius doloremque reprehenderit autem. Laudantium voluptate iure tenetur sunt rem? Ipsa quisquam excepturi recusandae.
               </p>
               <div className={style.hr} />
               <h3>Verto</h3>
@@ -111,7 +127,7 @@ const Slider = () => {
             </SwiperSlide>
             <SwiperSlide className={style.slider}>
               <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut qui adipisci facere explicabo similique aliquam, harum eius doloremque reprehenderit autem. Laudantium voluptate iure tenetur sunt rem? Ipsa quisquam excepturi recusandae.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut qui adipisci facere explicabo similique aliquam, harum eius doloremque reprehenderit autem. Laudantium voluptate iure tenetur sunt rem? Ipsa quisquam excepturi recusandae.
               </p>
               <hr />
               <h3>Verto</h3>
@@ -263,7 +279,7 @@ const Slider = () => {
           <div className={'next'}>
             <Image src={ArrowRight} />
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
