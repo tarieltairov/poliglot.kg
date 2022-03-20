@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "./solutions.module.scss";
 import DottedSqIcon from "../../../assets/svg/Icon-dottedSQ.svg";
 import Image from "next/image";
@@ -29,13 +29,25 @@ const Solutions = () => {
   function sendToServer(obj){
     try {
       let res = axios.post("https://kanatik6.pythonanywhere.com/message/messages/", obj)
-                // .then(res=>console.log(res))
       console.log(res)
     }
     catch(e){
       console.log(res)
     }
     
+  }
+
+  const [text, setText] = useState('')
+  useEffect(() => {
+    getText1()
+  }, [])
+  async function getText1() {
+    try {
+      let res = await axios.get("https://kanatik6.pythonanywhere.com/message/quick_project_start/")
+      setText(res.data)
+    } catch (e) {
+      console.log(e)
+    }
   }
 
   return (
@@ -98,8 +110,8 @@ const Solutions = () => {
               <div className={style.lineIndicator} />
             </div>
             <div className={style.block_texts}>
-              <h3>Contact</h3>
-              <p>Submit your project request to us</p>
+              <h3>{text[0]?.title}</h3>
+              <p>{text[0]?.descriptions}</p>
             </div>
           </div>
           <div className={style.block}>
@@ -140,8 +152,8 @@ const Solutions = () => {
               <div className={style.lineIndicator} />
             </div>
             <div className={style.block_texts}>
-              <h3>Analysis</h3>
-              <p>Technical investigation</p>
+              <h3>{text[1]?.title}</h3>
+              <p>{text[1]?.descriptions}</p>
             </div>
           </div>
           <div className={style.block}>
@@ -186,8 +198,8 @@ const Solutions = () => {
               <div className={style.lineIndicator} />
             </div>
             <div className={style.block_texts}>
-              <h3>Proposal</h3>
-              <p>We will provide you with our proposal</p>
+              <h3>{text[2]?.title}</h3>
+              <p>{text[2]?.descriptions}</p>
             </div>
           </div>
           <div className={style.block}>
@@ -259,8 +271,8 @@ const Solutions = () => {
               </div>
             </div>
             <div className={style.block_texts}>
-              <h3>Start</h3>
-              <p>We will prepare team and start</p>
+              <h3>{text[3]?.title}</h3>
+              <p>{text[3]?.descriptions}</p>
             </div>
           </div>
         </div>

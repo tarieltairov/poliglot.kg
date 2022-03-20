@@ -1,5 +1,5 @@
 import { Carousel } from "react-bootstrap";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import style from "./Hero.module.scss";
 import Image from "next/image";
 import ft from "../../../assets/new/ft.jpg"
@@ -8,24 +8,27 @@ import truck1 from "../../../assets/new/truck1.jpg"
 import axios from "axios";
 const Hero = ({ ref }) => {
   const [index, setIndex] = useState(0);
-
+  const [text, setText] = useState("")
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
+  useEffect(()=>{
+    getText()
+  },[])
   async function getText() {
     try {
-      let res = await axios.get("https://kanatik6.pythonanywhere.com/admin/")
-      console.log(res)
-    } catch (error) {
+      let res = await axios.get("https://kanatik6.pythonanywhere.com/message/home_page/")
+      setText(res.data[0])
+    } catch (e) {
       console.log(e)
     }
   }
   return (
     <div className={style.hh}>
       <div className={style.toto}>
-        <h1>Your adventure starts here</h1>
-        <p>Long-haul trucking that you can trust.</p>
-        <button onClick={()=>getText()}>
+        <h1>{text?.title}</h1>
+        <p>{text?.descriptions}</p>
+        <button >
           Apply now
         </button>
       </div>

@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import style from "./Services.module.scss";
 import ContentHeadTitle from "../../components/ContentHeadTitlte/ContentHeadTitle";
+import axios from "axios";
 
 const Services = () => {
+  const [text, setText] = useState('')
+  useEffect(() => {
+    getText1()
+  }, [])
+  async function getText1() {
+    try {
+      let res = await axios.get("https://kanatik6.pythonanywhere.com/message/our_services/")
+      setText(res.data)
+    } catch (e) {
+      console.log(e)
+    }
+  }
   return (
     <div id={"services"} className={style.services}>
       <div className="container">
@@ -59,10 +72,9 @@ const Services = () => {
                 fill="none"
               />
             </svg>
-            <h2 style={{marginTop: "40px"}}>Web Platforms</h2>
+            <h2 style={{marginTop: "40px"}}>{text[0]?.title}</h2>
             <p>
-              E-commerce, E-learning,
-              <br /> CRM systems, Admin dashboards
+              {text[0]?.descriptions}
             </p>
             <a href="#"> Find out more </a>
           </div>
@@ -77,7 +89,7 @@ const Services = () => {
               <path
                 className={style.sqFill}
                 d="M5.58274 25.3804C5.77106 27.5696 7.46682 29.3565 9.65729 29.5285C13.9755 29.8675 18.0242 29.8675 22.3424 29.5285C24.5329 29.3565 26.2286 27.5696 26.417 25.3804C26.6774 22.3531 26.9461 19.2154 26.9461 16C26.9461 12.7846 26.6774 9.64699 26.417 6.61962C26.2286 4.4305 24.5329 2.64357 22.3424 2.47158C18.0242 2.13252 13.9755 2.13252 9.65729 2.47158C7.46682 2.64357 5.77106 4.43049 5.58274 6.61962C5.32231 9.64699 5.05356 12.7846 5.05356 16C5.05356 19.2154 5.32231 22.3531 5.58274 25.3804Z"
-                fill="#D7E0FF"
+                fill="green"
                 stroke="red"
                 strokeWidth="3.42857"
               />
@@ -89,9 +101,9 @@ const Services = () => {
                 fill="#6462D9"
               />
             </svg>
-            <h2 style={{marginTop: "40px"}}>Mobile Application</h2>
+            <h2 style={{marginTop: "40px"}}>{text[1]?.title}</h2>
             <p>
-              Cross platform mobile applications for <br /> IOS and Android
+            {text[1]?.descriptions}
             </p>
             <a href="#"> Find out more </a>
           </div>
@@ -108,7 +120,7 @@ const Services = () => {
               <path
                 className={style.sqFill}
                 d="M21.4493 3.57282L9.41886 18.2716L13.7143 22.567L28.413 10.5366C30.6784 8.68247 30.8479 5.27788 28.7779 3.20793C26.708 1.13797 23.3034 1.30749 21.4493 3.57282Z"
-                fill="red"
+                fill="white"
               />
               <path
                 className={style.sqStroke}
@@ -118,7 +130,7 @@ const Services = () => {
               <path
                 className={style.sqFill}
                 d="M13.2143 27.9856C13.8459 27.4034 14.3501 26.6965 14.6949 25.9097C15.0397 25.1229 15.2178 24.2732 15.2178 23.4141C15.2178 22.5551 15.0397 21.7054 14.6949 20.9186C14.3501 20.1317 13.8459 19.4249 13.2143 18.8427C12.6321 18.2111 11.9252 17.7069 11.1384 17.3621C10.3516 17.0173 9.5019 16.8392 8.64285 16.8392C7.7838 16.8392 6.93406 17.0173 6.14726 17.3621C5.36045 17.7069 4.65364 18.2111 4.07142 18.8427C1.78571 21.1284 1.78571 30.2713 1.78571 30.2713C1.78571 30.2713 10.9286 30.2713 13.2143 27.9856Z"
-                fill="white"
+                fill="red"
                 stroke="red"
                 strokeWidth="3.42857"
                 strokeLinecap="round"
@@ -127,14 +139,14 @@ const Services = () => {
               <path
                 className={style.sqFill}
                 d="M1.78571 30.2711L7.17138 24.8855"
-                stroke="red"
+                stroke="white"
                 strokeWidth="3.42857"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
             </svg>
-            <h2>UX/UI Design</h2>
-            <p>Creative design for any product</p>
+            <h2>{text[2]?.title}</h2>
+            <p>{text[2]?.descriptions}</p>
             <a href="#"> Find out more </a>
           </div>
           <div className={`${style.miniBlock}`}>
@@ -160,10 +172,9 @@ const Services = () => {
                 strokeLinejoin="round"
               />
             </svg>
-            <h2>Staff augmentation</h2>
+            <h2>{text[3]?.title}</h2>
             <p>
-              Experienced backend and frontend developers for any kind of
-              project
+            {text[3]?.descriptions}
             </p>
             <a href="#"> Find out more </a>
           </div>
@@ -190,7 +201,7 @@ const Services = () => {
               />
               <path
                 d="M13.7953 9.11511C10.614 9.8371 8.86261 12.2429 8.86261 16.011C8.86261 20.5709 11.4276 23.1359 15.9876 23.1359C19.9406 23.1359 22.3944 21.2083 22.9775 17.7244"
-                stroke="red"
+                stroke="white"
                 strokeWidth="3.42858"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -198,7 +209,7 @@ const Services = () => {
               />
               <path
                 d="M15.9876 16.0111L20.7362 11.2626"
-                stroke="red"
+                stroke="white"
                 strokeWidth="3.42858"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -206,7 +217,7 @@ const Services = () => {
               />
               <path
                 d="M20.7341 11.2665L20.4497 10.3441C19.9503 8.72504 20.3875 6.96259 21.5855 5.7645L25.0637 2.28625L26.1598 5.84066L29.7142 6.93681L26.2362 10.415C25.0381 11.6131 23.2756 12.0503 21.6564 11.551L20.7341 11.2665Z"
-                fill="#D7E0FF"
+                fill="white"
                 stroke="red"
                 strokeWidth="3.42858"
                 strokeLinecap="round"
@@ -214,8 +225,8 @@ const Services = () => {
                 className={style.sqStroke}
               />
             </svg>
-            <h2>MVP development</h2>
-            <p>Test your business idea with minimum valuable product</p>
+            <h2>{text[4]?.title}</h2>
+            <p>{text[4]?.descriptions}</p>
             <a href="#"> Find out more </a>
           </div>
         </div>
