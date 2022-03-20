@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import style from "./About.module.scss";
 import BoltIcon from "../../../assets/svg/Icon-bolt.svg";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
 import ContentHeadTitle from "../../components/ContentHeadTitlte/ContentHeadTitle";

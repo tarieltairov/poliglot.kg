@@ -33,7 +33,7 @@ const Slider = () => {
   return (
     <div className={style.slider_main}>
       <div className='container'>
-        <motion.div className={style.heading}
+        <div className={style.heading}
           initial='hidden'
           whileInView='visible'
           transition={{ duration: 0.5 }}
@@ -43,8 +43,8 @@ const Slider = () => {
           }}
         >
           <ContentHeadTitle title='WHAT OUR CLIENTS SAY' centered />
-        </motion.div>
-        <motion.div className={`sliderWrapper ${style.sliderWrapper}`}
+        </div>
+        <div className={`sliderWrapper ${style.sliderWrapper}`}
           initial='hidden'
           whileInView='visible'
           transition={{ duration: 0.5 }}
@@ -299,7 +299,7 @@ const Slider = () => {
           <div className={'next'}>
             <Image src={ArrowRight} />
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

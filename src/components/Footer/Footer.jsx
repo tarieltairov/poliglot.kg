@@ -3,12 +3,11 @@ import style from "./Footer.module.scss";
 import Lofo from "../../assets/new/logo.png"
 import Insta from "../../assets/new/insta.png"
 import Image from "next/image";
-import {motion} from "framer-motion"
 const Footer = () => {
   return (
     <footer className={style.footer}>
       <div className="container">
-        <motion.div className={style.blocks}
+        <div className={style.blocks}
         initial='hidden'
         whileInView='visible'
         transition={{ duration: 0.5 }}
@@ -54,7 +53,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-        </motion.div>
+        </div>
         <div className={style.footerHr} />
         <div className={style.footerText}>
         </div>

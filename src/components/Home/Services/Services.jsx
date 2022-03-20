@@ -21,7 +21,7 @@ const Services = () => {
   return (
     <div id={"services"} className={style.services}>
       <div className="container">
-        <motion.div className={style.heading}
+        <div className={style.heading}
           initial='hidden'
           whileInView='visible'
           transition={{ duration: 0.5 }}
@@ -30,11 +30,11 @@ const Services = () => {
             hidden: { opacity: 0, scale: 0 },
           }}>
           <ContentHeadTitle title={"OUR SERVICES"} centered />
-        </motion.div>
+        </div>
         <div className={style.blocks}
           initial='hidden'
         >
-          <motion.div className={`${style.block}`}
+          <div className={`${style.block}`}
 
             initial='hidden'
             whileInView='visible'
@@ -98,8 +98,8 @@ const Services = () => {
               {text[0]?.descriptions}
             </p>
             <a href="#"> Find out more </a>
-          </motion.div>
-          <motion.div className={`${style.block}`}
+          </div>
+          <div className={`${style.block}`}
             initial='hidden'
             whileInView='visible'
             transition={{ duration: 0.5 }}
@@ -136,9 +136,9 @@ const Services = () => {
             {text[1]?.descriptions}
             </p>
             <a href="#"> Find out more </a>
-          </motion.div>
+          </div>
         </div>
-        <motion.div className={style.miniBlocks}
+        <div className={style.miniBlocks}
         initial='hidden'
         whileInView='visible'
         transition={{ duration: 0.5 }}
@@ -267,7 +267,7 @@ const Services = () => {
             <p>{text[4]?.descriptions}</p>
             <a href="#"> Find out more </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div >
   );
