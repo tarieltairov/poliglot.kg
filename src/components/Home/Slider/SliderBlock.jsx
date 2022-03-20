@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import style from './Slider.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper';
@@ -10,8 +10,26 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import ContentHeadTitle from '../../components/ContentHeadTitlte/ContentHeadTitle';
-import { motion } from "framer-motion"
+
+import axios from 'axios';
+
 const Slider = () => {
+  const [text, setText] = useState('')
+
+  useEffect(() => {
+    getText1()
+  }, [])
+
+  async function getText1() {
+    try {
+      let res = await axios.get("https://kanatik6.pythonanywhere.com/message/comments/")
+      console.log(res)
+      setText(res.data)
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
   return (
     <div className={style.slider_main}>
       <div className='container'>
@@ -53,10 +71,12 @@ const Slider = () => {
           >
             <SwiperSlide className={style.slider}>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut qui adipisci facere explicabo similique aliquam, harum eius doloremque reprehenderit autem. Laudantium voluptate iure tenetur sunt rem? Ipsa quisquam excepturi recusandae.
+
+                {text[0]?.descriptions}
+
               </p>
               <div className={style.hr} />
-              <h3>Verto</h3>
+              <h3>{text[0]?.title}</h3>
               <p>Partner’s mountain water Co LLC.</p>
               <div className={style.quotes}>
                 <svg
@@ -118,8 +138,8 @@ const Slider = () => {
                       y2='69.4304'
                       gradientUnits='userSpaceOnUse'
                     >
-                      <stop stop-color='orange' />
-                      <stop offset='1' stop-color='orange' />
+                      <stop stop-color='red' />
+                      <stop offset='1' stop-color='red' />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -127,10 +147,11 @@ const Slider = () => {
             </SwiperSlide>
             <SwiperSlide className={style.slider}>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut qui adipisci facere explicabo similique aliquam, harum eius doloremque reprehenderit autem. Laudantium voluptate iure tenetur sunt rem? Ipsa quisquam excepturi recusandae.
-              </p>
+
+                {text[1]?.descriptions}              </p>
+
               <hr />
-              <h3>Verto</h3>
+              <h3>{text[1]?.title}</h3>
               <p>Partner’s mountain water Co LLC.</p>
 
               <div className={style.quotes}>
@@ -202,10 +223,9 @@ const Slider = () => {
             </SwiperSlide>
             <SwiperSlide className={style.slider}>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut qui adipisci facere explicabo similique aliquam, harum eius doloremque reprehenderit autem. Laudantium voluptate iure tenetur sunt rem? Ipsa quisquam excepturi recusandae.
-              </p>
+              {text[2]?.descriptions}               </p>
               <hr />
-              <h3>Verto</h3>
+              <h3>{text[2]?.title} </h3>
               <p>Partner’s mountain water Co LLC.</p>
 
               <div className={style.quotes}>

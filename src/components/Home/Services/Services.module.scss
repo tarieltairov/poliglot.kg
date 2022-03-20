@@ -40,7 +40,7 @@
   .block:hover {
     color: white;
     box-shadow: 0 3px 34px rgba(228, 141, 10, 0.4);
-    background: linear-gradient(97.01deg, orange -4.32%, orangered 89.23%);
+    background: linear-gradient(97.01deg, orangered -4.32%, red 89.23%);
   }
 
   img {
@@ -81,17 +81,17 @@
 
 .sqFill {
   transition: all 0.5s ease 0s;
-  fill: orange;
+  fill: red;
 }
 
 .sqStroke {
   transition: all 0.5s ease 0s;
-  stroke: orange;
+  stroke: red;
 }
 
 .block:hover .sqFill,
 .miniBlock:hover .sqFill {
-  fill: orange;
+  fill: red;
 }
 
 .block:hover .sqStroke,
@@ -155,7 +155,7 @@
   .miniBlock:hover {
     color: white;
     box-shadow: 0 3px 34px rgba(233, 183, 20, 0.4);
-    background: linear-gradient(97.01deg, orange -4.32%, orangered 89.23%);
+    background: linear-gradient(97.01deg, orangered -4.32%, red 89.23%);
     transition: all 0.5s ease 0s;
   }
 

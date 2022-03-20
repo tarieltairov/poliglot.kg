@@ -9,13 +9,25 @@ import truck1 from "../../../assets/new/truck1.jpg"
 import truck2 from "../../../assets/new/truck2.jpg"
 import { Carousel } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import axios from "axios";
 
 const About = () => {
   const [open, setOpen] = useState(false);
   const isLaptop = useMediaQuery({ query: "(max-width: 992px)" });
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const [index, setIndex] = useState(0);
-
+  const [text, setText] = useState('')
+  useEffect(() => {
+    getText1()
+  }, [])
+  async function getText1() {
+    try {
+      let res = await axios.get("https://kanatik6.pythonanywhere.com/message/about_us/")
+      setText(res.data[0])
+    } catch (e) {
+      console.log(e)
+    }
+  }
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
@@ -63,7 +75,9 @@ const About = () => {
       <div id={"about"} className="container">
         <div className={style.block}>
           <div className={style.firstBlock}>
-            <motion.div
+
+            <div
+
               initial='hidden'
               whileInView='visible'
               transition={{ duration: 0.5 }}
@@ -72,9 +86,11 @@ const About = () => {
                 hidden: { opacity: 0, scale: 0 },
               }} className={style.heading}>
               <ContentHeadTitle title={"ABOUT US"} />
-            </motion.div>
+            </div>
             <div className={style.content}>
-              <motion.h4
+
+              <h4
+
                 initial='hidden'
                 whileInView='visible'
                 transition={{ duration: 0.5 }}
@@ -83,9 +99,11 @@ const About = () => {
                   hidden: { opacity: 0, scale: 0 },
                 }}
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi velit suscipit error est magnam, modi unde corrupti ullam numquam odio, quos ipsum sunt itaque sit magni aspernatur esse quisquam dicta!
-              </motion.h4>
-              <motion.abbrdiv className={style.contentBlock}
+
+                {text.title}
+              </h4>
+              <div className={style.contentBlock}
+
                 initial='hidden'
                 whileInView='visible'
                 transition={{ duration: 0.5 }}
@@ -96,10 +114,12 @@ const About = () => {
               >
                 <Image src={BoltIcon} />
                 <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias natus id nulla quibusdam perspiciatis voluptates dicta unde eveniet adipisci repellat, esse, harum sint doloribus voluptate incidunt commodi, facere nostrum assumenda.
+                  {text.descriptions}
                 </p>
-              </motion.abbrdiv>
-              <motion.div className={style.contentBlock}
+
+              </div>
+              <div className={style.contentBlock}
+
                 initial='hidden'
                 whileInView='visible'
                 transition={{ duration: 0.5 }}
@@ -109,9 +129,11 @@ const About = () => {
                 }}>
                 <Image src={BoltIcon} />
                 <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, repellendus sit aperiam iure, dolore impedit eius ullam cumque tempora incidunt sunt libero expedita, fuga voluptas fugiat? Distinctio, dolore odio. Quasi.
-                </p>
-              </motion.div>
+
+                  {text.descriptions2}
+                  </p>
+              </div>
+
             </div>
             <div className={style.buttons}>
               <a href="/#contacts">
@@ -119,15 +141,18 @@ const About = () => {
               </a>
             </div>
           </div>
-          <motion.div animate={animateShadow} className={style.shadow} />
-          <motion.div
-          initial='hidden'
-          whileInView='visible'
-          transition={{ duration: 0.5 }}
-          variants={{
-            visible: { opacity: 1, x: 0 },
-            hidden: { opacity: 0, x: 100 },
-          }}>
+
+          <div animate={animateShadow} className={style.shadow} />
+          <div
+            initial='hidden'
+            whileInView='visible'
+            transition={{ duration: 0.5 }}
+            variants={{
+              visible: { opacity: 1, x: 0 },
+              hidden: { opacity: 0, x: 100 },
+            }}>
+
+
             <Carousel activeIndex={index} onSelect={handleSelect} className={style.slider}>
               <Carousel.Item>
                 <Image src={truck1} width={900} height={600} />
@@ -136,7 +161,9 @@ const About = () => {
                 <Image src={truck2} width={900} height={600} />
               </Carousel.Item>
             </Carousel>
-          </motion.div>
+
+          </div>
+
 
         </div>
       </div>

@@ -5,14 +5,10 @@ html {
 }
 
 .carousel-control-prev{
-  @media(max-width: 425px){
-    margin-bottom: 200px !important;
-  }
+  display: none !important;
 }
 .carousel-control-next{
-  @media(max-width: 425px){
-    margin-bottom: 210px !important;
-  }
+  display: none !important;
 }
 .next{
   @media(max-width: 768px){
@@ -62,7 +58,7 @@ code {
   padding-bottom: 40px !important;
 }
 :root {
-  --swiper-theme-color: orange !important;
+  --swiper-theme-color: red !important;
 }
 
 .swiper-button-next {
@@ -151,20 +147,20 @@ color: black !important;
 font-size: 20px !important;
 }
 .swiper-pagination-bullet{
-  background-color: orange !important; 
+  background-color: red !important; 
 }
 
 .carousel-indicators [data-bs-target]{
-  background-color: orange !important;
-  @media (max-width: 425px){
-    margin-bottom: 15rem!important;
-  }
-  @media (max-width: 320px){
-    margin-bottom: 18rem!important;
-  }
+  background-color: red !important;
+  // @media (max-width: 425px){
+  //   margin-bottom: 15rem!important;
+  // }
+    @media (max-width: 320px){
+      margin-top: 18rem!important;
+    }
 }
 .carousel-item span{
-  border-radius: 30px !important;
+  border-radius: 5px !important;
 }
 
 

@@ -53,7 +53,7 @@
       .lineIndicator {
         width: 100%;
         height: 1px;
-        border-top: 3px dotted orange;
+        border-top: 3px dotted red;
 
         @media (max-width: 768px) {
           height: 100%;
@@ -84,7 +84,7 @@
     justify-content: space-between;
     max-width: 100%;
     padding: 72px 80px 66px 80px;
-    background: linear-gradient(97.01deg, orange -4.32%, orangered 89.23%);
+    background: linear-gradient(97.01deg, orangered -4.32%, red 89.23%);
     box-shadow: 0 3px 34px rgba(124, 68, 4, 0.4);
     border-radius: 20px;
     color: white;
@@ -182,7 +182,7 @@
         border-radius: 34px;
         padding: 20px 50px;
         border: none;
-        color: rgba(255, 255, 255, 0.8);
+        color: black !important;
         font-style: normal;
         font-size: 16px;
         line-height: 33px;
@@ -232,7 +232,7 @@
         border-radius: 40px;
         border: none;
         cursor: pointer;
-        color: orange;
+        color: red;
 
         &:active {
           box-shadow: 0 3px 67px rgba(180, 99, 6, 0.4),
@@ -264,7 +264,9 @@
 
 
 .io{
+  margin-right: 10px;
   @media(max-width:425px){
     margin-bottom: 20px;
+    margin-right: 0px;
   }
 }

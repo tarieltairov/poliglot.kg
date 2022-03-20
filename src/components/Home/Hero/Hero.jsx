@@ -1,36 +1,55 @@
-import React from "react";
+import { Carousel } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
 import style from "./Hero.module.scss";
-import { motion } from "framer-motion"
-const Hero = ({ ref }) => {
-  return (
-    <>
-      <div ref={ref} id={"home"} className={style.home}>
-        <div className={style.main}>
-          <motion.div className={style.content}
-            initial='hidden'
-            whileInView='visible'
-            transition={{ duration: 0.7 }}
-            variants={{
-              visible: { opacity: 1, scale: 1 },
-              hidden: { opacity: 0, scale: 0 },
-            }}
-          >
-            <h1>
-              Ta Trains Inc
 
-            </h1>
-            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam inventore adipisci ratione fugit, asperiores assumenda. Dignissimos velit, quia accusantium fuga asperiores voluptates autem hic dolor iste, quasi in laudantium quaerat.</h4>
-          </motion.div>
-        </div>
-        <div className={style.videoWrapper}>
-          <div className={style.videoBgHolder}>
-            <video autoPlay loop muted>
-              <source src="/vid.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </div>
+import Image from "next/image";
+import ft from "../../../assets/new/ft.jpg"
+import ft2 from "../../../assets/new/ft2.jpg"
+import truck1 from "../../../assets/new/truck1.jpg"
+import axios from "axios";
+
+const Hero = ({ ref }) => {
+  const [index, setIndex] = useState(0);
+  const [text, setText] = useState("")
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
+  useEffect(()=>{
+    getText()
+  },[])
+  async function getText() {
+    try {
+      let res = await axios.get("https://kanatik6.pythonanywhere.com/message/home_page/")
+      setText(res.data[0])
+    } catch (e) {
+      console.log(e)
+    }
+  }
+  return (
+
+    <div className={style.hh}>
+      <div className={style.toto}>
+        <h1>{text?.title}</h1>
+        <p>{text?.descriptions}</p>
+        <button >
+          Apply now
+        </button>
+
       </div>
-    </>
+      <Carousel activeIndex={index} onSelect={handleSelect} className={style.slider}>
+        <Carousel.Item className={style.lol}>
+          <Image src={truck1} className={style.img} />
+          <Carousel.Caption>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item className={style.lol}>
+          <Image src={ft} className={style.img} />
+        </Carousel.Item>
+        <Carousel.Item className={style.lol}>
+          <Image src={ft2} className={style.img} />
+        </Carousel.Item>
+      </Carousel>
+    </div>
   );
 };
 

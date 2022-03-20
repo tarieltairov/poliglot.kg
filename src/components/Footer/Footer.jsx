@@ -35,12 +35,6 @@ const Footer = () => {
             <a href="/#solutions">Solutions</a>
           </div>
           <div className={style.blockFooter}>
-            <h3>Services</h3>
-            <a href="/">Web Platform</a>
-            <a href="/">Mobile Apps</a>
-            <a href="/#about">About Us</a>
-          </div>
-          <div className={style.blockFooter}>
             <h3>Contacts</h3>
             <a href="mailto: hello@zettasoft.io">lorem</a>
             <a
