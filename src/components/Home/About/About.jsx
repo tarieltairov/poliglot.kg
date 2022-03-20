@@ -75,7 +75,9 @@ const About = () => {
       <div id={"about"} className="container">
         <div className={style.block}>
           <div className={style.firstBlock}>
+
             <div
+
               initial='hidden'
               whileInView='visible'
               transition={{ duration: 0.5 }}
@@ -86,7 +88,9 @@ const About = () => {
               <ContentHeadTitle title={"ABOUT US"} />
             </div>
             <div className={style.content}>
+
               <h4
+
                 initial='hidden'
                 whileInView='visible'
                 transition={{ duration: 0.5 }}
@@ -95,9 +99,11 @@ const About = () => {
                   hidden: { opacity: 0, scale: 0 },
                 }}
               >
+
                 {text.title}
               </h4>
               <div className={style.contentBlock}
+
                 initial='hidden'
                 whileInView='visible'
                 transition={{ duration: 0.5 }}
@@ -110,8 +116,10 @@ const About = () => {
                 <p>
                   {text.descriptions}
                 </p>
+
               </div>
               <div className={style.contentBlock}
+
                 initial='hidden'
                 whileInView='visible'
                 transition={{ duration: 0.5 }}
@@ -121,9 +129,11 @@ const About = () => {
                 }}>
                 <Image src={BoltIcon} />
                 <p>
+
                   {text.descriptions2}
                   </p>
               </div>
+
             </div>
             <div className={style.buttons}>
               <a href="/#contacts">
@@ -131,6 +141,7 @@ const About = () => {
               </a>
             </div>
           </div>
+
           <div animate={animateShadow} className={style.shadow} />
           <div
             initial='hidden'
@@ -140,6 +151,8 @@ const About = () => {
               visible: { opacity: 1, x: 0 },
               hidden: { opacity: 0, x: 100 },
             }}>
+
+
             <Carousel activeIndex={index} onSelect={handleSelect} className={style.slider}>
               <Carousel.Item>
                 <Image src={truck1} width={900} height={600} />
@@ -148,7 +161,9 @@ const About = () => {
                 <Image src={truck2} width={900} height={600} />
               </Carousel.Item>
             </Carousel>
+
           </div>
+
 
         </div>
       </div>

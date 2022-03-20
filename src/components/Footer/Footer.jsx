@@ -3,12 +3,20 @@ import style from "./Footer.module.scss";
 import Lofo from "../../assets/new/logo.png"
 import Insta from "../../assets/new/insta.png"
 import Image from "next/image";
-
+import {motion} from "framer-motion"
 const Footer = () => {
   return (
     <footer className={style.footer}>
       <div className="container">
-        <div className={style.blocks}>
+        <motion.div className={style.blocks}
+        initial='hidden'
+        whileInView='visible'
+        transition={{ duration: 0.5 }}
+        variants={{
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: -100 },
+        }}
+        >
           <div className={style.blockFooter}>
             <div className={style.logoBlock}>
               <Image width={33} height={36} src={Lofo} />
@@ -46,7 +54,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
         <div className={style.footerHr} />
         <div className={style.footerText}>
         </div>

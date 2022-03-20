@@ -10,6 +10,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import ContentHeadTitle from '../../components/ContentHeadTitlte/ContentHeadTitle';
+
 import axios from 'axios';
 
 const Slider = () => {
@@ -32,10 +33,26 @@ const Slider = () => {
   return (
     <div className={style.slider_main}>
       <div className='container'>
-        <div className={style.heading}>
+        <motion.div className={style.heading}
+          initial='hidden'
+          whileInView='visible'
+          transition={{ duration: 0.5 }}
+          variants={{
+            visible: { opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0 },
+          }}
+        >
           <ContentHeadTitle title='WHAT OUR CLIENTS SAY' centered />
-        </div>
-        <div className={`sliderWrapper ${style.sliderWrapper}`}>
+        </motion.div>
+        <motion.div className={`sliderWrapper ${style.sliderWrapper}`}
+          initial='hidden'
+          whileInView='visible'
+          transition={{ duration: 0.5 }}
+          variants={{
+            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, x: 100 },
+          }}
+         >
           <div className={'prev'}>
             <Image src={ArrowLeft} />
           </div>
@@ -54,7 +71,9 @@ const Slider = () => {
           >
             <SwiperSlide className={style.slider}>
               <p>
+
                 {text[0]?.descriptions}
+
               </p>
               <div className={style.hr} />
               <h3>{text[0]?.title}</h3>
@@ -128,7 +147,9 @@ const Slider = () => {
             </SwiperSlide>
             <SwiperSlide className={style.slider}>
               <p>
+
                 {text[1]?.descriptions}              </p>
+
               <hr />
               <h3>{text[1]?.title}</h3>
               <p>Partner’s mountain water Co LLC.</p>
@@ -278,7 +299,7 @@ const Slider = () => {
           <div className={'next'}>
             <Image src={ArrowRight} />
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
