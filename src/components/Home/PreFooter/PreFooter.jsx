@@ -1,11 +1,10 @@
 import React from "react";
 import style from "./PreFooter.module.scss";
-import { motion } from "framer-motion"
 const PreFooter = () => {
   return (
     <div className={style.preFooter}>
       <div className={style.whiteBlock}>
-        <motion.h2
+        <h2
           initial='hidden'
           whileInView='visible'
           transition={{ duration: 0.5 }}
@@ -13,8 +12,8 @@ const PreFooter = () => {
             visible: { opacity: 1, scale: 1 },
             hidden: { opacity: 0, scale: 0 },
           }}
-        >Let’s Work Together</motion.h2>
-        <motion.p
+        >Let’s Work Together</h2>
+        <p
           initial='hidden'
           whileInView='visible'
           transition={{ duration: 0.5 }}
@@ -24,9 +23,9 @@ const PreFooter = () => {
           }}
         >
           Lorem ipsum dolor sit amet consectetur
-        </motion.p>
+        </p>
         <a href="/#contacts">
-          <motion.button
+          <button
           initial='hidden'
           whileInView='visible'
           transition={{ duration: 0.5 }}
@@ -34,7 +33,7 @@ const PreFooter = () => {
             visible: { opacity: 1, y: 0 },
             hidden: { opacity: 0, y: -100 },
           }}
-          >Contact Us</motion.button>
+          >Contact Us</button>
         </a>
       </div>
     </div>

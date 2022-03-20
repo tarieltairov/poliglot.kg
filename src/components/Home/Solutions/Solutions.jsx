@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import style from "./solutions.module.scss";
 import DottedSqIcon from "../../../assets/svg/Icon-dottedSQ.svg";
 import Image from "next/image";
-import { motion } from "framer-motion"
 import ContentHeadTitle from "../../components/ContentHeadTitlte/ContentHeadTitle";
 import { TextField } from "@mui/material";
 import Radio from '@mui/material/Radio';
@@ -53,7 +52,7 @@ const Solutions = () => {
   return (
     <div id={"solutions"} className="container">
       <div className={style.solutions}>
-        <motion.div className={style.heading}
+        <div className={style.heading}
           initial='hidden'
           whileInView='visible'
           transition={{ duration: 0.5 }}
@@ -63,8 +62,8 @@ const Solutions = () => {
           }}
         >
           <ContentHeadTitle title={"QUICK PROJECT START"} centered />
-        </motion.div>
-        <motion.div className={style.blocks}
+        </div>
+        <div className={style.blocks}
           initial='hidden'
           whileInView='visible'
           transition={{ duration: 0.5 }}
@@ -291,8 +290,8 @@ const Solutions = () => {
               <p>{text[3]?.descriptions}</p>
             </div>
           </div>
-        </motion.div>
-        <motion.div id="contacts" className={style.projectBlock}
+        </div>
+        <div id="contacts" className={style.projectBlock}
 
           initial='hidden'
           whileInView='visible'
@@ -346,7 +345,7 @@ const Solutions = () => {
           <div className={style.leftDotted}>
             <Image src={DottedSqIcon} />
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
