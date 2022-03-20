@@ -22,13 +22,7 @@ const Services = () => {
     <div id={"services"} className={style.services}>
       <div className="container">
         <div className={style.heading}
-          initial='hidden'
-          whileInView='visible'
-          transition={{ duration: 0.5 }}
-          variants={{
-            visible: { opacity: 1, scale: 1 },
-            hidden: { opacity: 0, scale: 0 },
-          }}>
+          >
           <ContentHeadTitle title={"OUR SERVICES"} centered />
         </div>
         <div className={style.blocks}

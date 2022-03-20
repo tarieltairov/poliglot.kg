@@ -1,7 +1,7 @@
 import { Carousel } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import style from "./Hero.module.scss";
-
+import Link from "next/link"
 import Image from "next/image";
 import ft from "../../../assets/new/ft.jpg"
 import ft2 from "../../../assets/new/ft2.jpg"
@@ -14,9 +14,9 @@ const Hero = ({ ref }) => {
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
-  useEffect(()=>{
+  useEffect(() => {
     getText()
-  },[])
+  }, [])
   async function getText() {
     try {
       let res = await axios.get("https://kanatik6.pythonanywhere.com/message/home_page/")
@@ -31,9 +31,11 @@ const Hero = ({ ref }) => {
       <div className={style.toto}>
         <h1>{text?.title}</h1>
         <p>{text?.descriptions}</p>
-        <button >
-          Apply now
-        </button>
+        <Link href="/#contacts">
+          <button >
+            Apply now
+          </button>
+        </Link>
 
       </div>
       <Carousel activeIndex={index} onSelect={handleSelect} className={style.slider}>

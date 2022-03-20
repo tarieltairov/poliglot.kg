@@ -14,13 +14,13 @@ const Header = ({ inView }) => {
           <div className={style.logo}>
             <Link href="/">
 
-              <h2>TA TRANS INC</h2>
+              <h2>TA TRAINS INC</h2>
             </Link>
           </div>
 
           <div className={style.links}>
             <Link href="/"><p>HOME</p></Link>
-            <Link href="/#about"><p>ABOUT US</p></Link>
+            <Link href="/#about"><p>ABOUT_US</p></Link>
             <Link href="/#services"><p>SERVICES</p></Link>
             <Link href="/#contacts"><p>CONTACT</p></Link>
             <Link href="/#solutions"><p>SOLUTIONS</p></Link>
