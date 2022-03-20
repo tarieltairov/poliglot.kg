@@ -52,7 +52,7 @@ const Slider = () => {
             visible: { opacity: 1, x: 0 },
             hidden: { opacity: 0, x: 100 },
           }}
-         >
+        >
           <div className={'prev'}>
             <Image src={ArrowLeft} />
           </div>
@@ -77,7 +77,6 @@ const Slider = () => {
               </p>
               <div className={style.hr} />
               <h3>{text[0]?.title}</h3>
-              <p>Partner’s mountain water Co LLC.</p>
               <div className={style.quotes}>
                 <svg
                   width='96'
@@ -152,7 +151,6 @@ const Slider = () => {
 
               <hr />
               <h3>{text[1]?.title}</h3>
-              <p>Partner’s mountain water Co LLC.</p>
 
               <div className={style.quotes}>
                 <svg
@@ -223,10 +221,9 @@ const Slider = () => {
             </SwiperSlide>
             <SwiperSlide className={style.slider}>
               <p>
-              {text[2]?.descriptions}               </p>
+                {text[2]?.descriptions}               </p>
               <hr />
               <h3>{text[2]?.title} </h3>
-              <p>Partner’s mountain water Co LLC.</p>
 
               <div className={style.quotes}>
                 <svg

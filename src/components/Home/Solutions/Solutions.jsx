@@ -25,15 +25,31 @@ const Solutions = () => {
     setSelectedValue(event.target.value);
   };
 
-  function sendToServer(obj){
+  function gagaTo(obj) {
+    if (!name || !email || !year || !phone || !selectedValue) {
+      alert("Enter data")
+    } else {
+      sendToServer(obj),
+        setName(""),
+        setEmail(''),
+        setYear(''),
+        setPhone(''),
+        setSelectedValue('')
+        setTimeout(() => {
+          alert('Data was send')
+        }, 1000);
+    }
+  }
+
+  function sendToServer(obj) {
     try {
       let res = axios.post("https://kanatik6.pythonanywhere.com/message/messages/", obj)
       console.log(res)
     }
-    catch(e){
+    catch (e) {
       console.log(res)
     }
-    
+
   }
 
   const [text, setText] = useState('')
@@ -307,13 +323,13 @@ const Solutions = () => {
           </div>
           <div className={style.inputBlock}>
             <div className={style.inputBlock_first}>
-              <TextField id="Name" label="Name" variant="outlined"  onChange={(e) => setName(e.target.value)} className={style.io} />
-              <TextField id="Email" label="Email" variant="outlined" type="email" onChange={(e) => setEmail(e.target.value)} />
+              <TextField id="Name" label="Name" value={name} variant="outlined" onChange={(e) => setName(e.target.value)} className={style.io} />
+              <TextField id="Email" label="Email" value={email} variant="outlined" type="email" onChange={(e) => setEmail(e.target.value)} />
             </div>
             <div className={style.inputBlock_second}>
 
-              <TextField id="Years" label="Years of Experience" type="number" variant="outlined" onChange={(e) => setYear(e.target.value)} className={style.io} />
-              <TextField id="Phone number" label="Phone number" type="number" variant="outlined" onChange={(e) => setPhone(e.target.value)} />
+              <TextField id="Years" label="Years of Experience" value={year} type="number" variant="outlined" onChange={(e) => setYear(e.target.value)} className={style.io} />
+              <TextField id="Phone number" label="Phone number" value={phone} ariant="outlined" onChange={(e) => setPhone(e.target.value)} />
 
             </div>
             <h5>Position</h5>
@@ -336,7 +352,7 @@ const Solutions = () => {
                   inputProps={{ 'aria-label': 'B' }}
                 />
               </div>
-              <button onClick={() => sendToServer(data)}>Apply</button>
+              <button onClick={() => gagaTo(data)}>Apply</button>
             </div>
           </div>
           <div className={style.rightDotted}>

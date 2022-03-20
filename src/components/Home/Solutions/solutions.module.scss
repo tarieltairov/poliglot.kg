@@ -235,6 +235,7 @@
         color: red;
 
         &:active {
+          background-color: grey;
           box-shadow: 0 3px 67px rgba(180, 99, 6, 0.4),
             inset 7px -5px 8px rgba(0, 0, 0, 0.29);
         }
