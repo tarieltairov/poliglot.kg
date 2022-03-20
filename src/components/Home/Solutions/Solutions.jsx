@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import style from "./solutions.module.scss";
 import DottedSqIcon from "../../../assets/svg/Icon-dottedSQ.svg";
 import Image from "next/image";
-import MediaQuery from "react-responsive";
+import { motion } from "framer-motion"
 import ContentHeadTitle from "../../components/ContentHeadTitlte/ContentHeadTitle";
 import { TextField } from "@mui/material";
 import Radio from '@mui/material/Radio';
@@ -53,10 +53,26 @@ const Solutions = () => {
   return (
     <div id={"solutions"} className="container">
       <div className={style.solutions}>
-        <div className={style.heading}>
+        <motion.div className={style.heading}
+          initial='hidden'
+          whileInView='visible'
+          transition={{ duration: 0.5 }}
+          variants={{
+            visible: { opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0 },
+          }}
+        >
           <ContentHeadTitle title={"QUICK PROJECT START"} centered />
-        </div>
-        <div className={style.blocks}>
+        </motion.div>
+        <motion.div className={style.blocks}
+          initial='hidden'
+          whileInView='visible'
+          transition={{ duration: 0.5 }}
+          variants={{
+            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, x: 100 },
+          }}
+        >
           <div className={style.block}>
             <div className={style.svgs}>
               <div className={style.svgs_img}>
@@ -275,8 +291,17 @@ const Solutions = () => {
               <p>{text[3]?.descriptions}</p>
             </div>
           </div>
-        </div>
-        <div id="contacts" className={style.projectBlock}>
+        </motion.div>
+        <motion.div id="contacts" className={style.projectBlock}
+
+          initial='hidden'
+          whileInView='visible'
+          transition={{ duration: 0.5 }}
+          variants={{
+            visible: { opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0 },
+          }}
+        >
           <div className={style.titleBlock}>
             <h2>Have a project?</h2>
             <p>Let’s contact with us!</p>
@@ -287,8 +312,10 @@ const Solutions = () => {
               <TextField id="Email" label="Email" variant="outlined" type="email" onChange={(e) => setEmail(e.target.value)} />
             </div>
             <div className={style.inputBlock_second}>
+
               <TextField id="Years" label="Years of Experience" type="number" variant="outlined" onChange={(e) => setYear(e.target.value)} className={style.io} />
               <TextField id="Phone number" label="Phone number" type="number" variant="outlined" onChange={(e) => setPhone(e.target.value)} />
+
             </div>
             <h5>Position</h5>
             <div className={style.inputBlock_footer}>
@@ -319,7 +346,7 @@ const Solutions = () => {
           <div className={style.leftDotted}>
             <Image src={DottedSqIcon} />
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

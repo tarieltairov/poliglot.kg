@@ -1,11 +1,13 @@
 import { Carousel } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import style from "./Hero.module.scss";
+
 import Image from "next/image";
 import ft from "../../../assets/new/ft.jpg"
 import ft2 from "../../../assets/new/ft2.jpg"
 import truck1 from "../../../assets/new/truck1.jpg"
 import axios from "axios";
+
 const Hero = ({ ref }) => {
   const [index, setIndex] = useState(0);
   const [text, setText] = useState("")
@@ -24,6 +26,7 @@ const Hero = ({ ref }) => {
     }
   }
   return (
+
     <div className={style.hh}>
       <div className={style.toto}>
         <h1>{text?.title}</h1>
@@ -31,6 +34,7 @@ const Hero = ({ ref }) => {
         <button >
           Apply now
         </button>
+
       </div>
       <Carousel activeIndex={index} onSelect={handleSelect} className={style.slider}>
         <Carousel.Item className={style.lol}>
