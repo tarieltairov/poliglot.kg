@@ -90,8 +90,9 @@ CDL,
           Местный водитель грузовика,
           Сухой фургон,
           Бортовой грузовик" />
+          <meta name="google-site-verification" content="oSCWk-Y-_Xhyw0OYr8eI7pOkPOCGLaicG6xc04XGndc" />
         <link rel="icon" href="/logo.ico" />
-      </Head>й
+      </Head>
 
       <Header inView={inView} />
 
