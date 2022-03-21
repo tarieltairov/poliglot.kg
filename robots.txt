@@ -1,0 +1,3 @@
+User-agent: Googlebot
+Disallow: 
+Host: www.//ta-trainc-inc-kq0w4m4ip-tarieltairov.vercel.app
