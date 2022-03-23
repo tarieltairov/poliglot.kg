@@ -47,7 +47,7 @@ const Footer = () => {
               <a
                 rel="noreferrer noopener"
                 target="_blank"
-                href="https://www.instagram.com/"
+                href="https://instagram.com/tatransinc?utm_medium=copy_link"
               >
                 <Image src={Insta} width={50} height={50}/>
               </a>
