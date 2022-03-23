@@ -216,3 +216,31 @@
   }
 }
 
+@media all and (min-width: 1441px){
+  .slider{
+    width: 90%;
+  }
+  .hh{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media all and (min-width: 1641px){
+  .slider{
+    width: 80%;
+  }
+}
+
+@media all and (min-width: 1941px){
+  .slider{
+    width: 70%;
+  }
+
+}
+
+@media all and (min-width: 2560px){
+  .slider{
+    width: 60%;
+  }
+}
