@@ -318,7 +318,7 @@ const Solutions = () => {
           }}
         >
           <div className={style.titleBlock}>
-            <h2>Have a project?</h2>
+            <h2>Apply now</h2>
             <p>Let’s contact with us!</p>
           </div>
           <div className={style.inputBlock}>
