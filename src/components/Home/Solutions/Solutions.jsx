@@ -15,9 +15,9 @@ const Solutions = () => {
   const data = {
     name: name,
     email: email,
-    year: year,
+    experience: year,
     number: phone,
-    position: selectedValue
+    role: selectedValue
   }
 
 
