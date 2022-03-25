@@ -22,8 +22,10 @@ const Header = ({ inView }) => {
             <Link href="/"><p>HOME</p></Link>
             <Link href="/#about"><p>ABOUT US</p></Link>
             <Link href="/#services"><p>SERVICES</p></Link>
-            <Link href="/#contacts"><p>CONTACT</p></Link>
             <Link href="/#solutions"><p>SOLUTIONS</p></Link>
+            <Link href="/#contacts"><button className={style.button}>
+              Apply now
+            </button></Link>
           </div>
           <div
             className={style.burger}>

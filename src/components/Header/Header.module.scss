@@ -109,6 +109,7 @@
   width: 50%;
   display: flex;
   justify-content: space-between;
+  text-align: center;
   align-items: center;
   p{
     color: white;
@@ -129,4 +130,13 @@
   @media (max-width: 800px){
     display: block;
   }
+}
+
+.button{
+  width: 140px;
+      height: 40px;
+      border-radius: 35px;
+      background-color: red;
+      color: white;
+      margin-bottom: 20px;
 }

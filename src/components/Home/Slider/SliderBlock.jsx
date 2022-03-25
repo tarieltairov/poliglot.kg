@@ -42,7 +42,7 @@ const Slider = () => {
             hidden: { opacity: 0, scale: 0 },
           }}
         >
-          <ContentHeadTitle title='WHAT OUR CLIENTS SAY' centered />
+          <ContentHeadTitle title='WHAT OUR DRIVERS SAY' centered />
         </div>
         <div className={`sliderWrapper ${style.sliderWrapper}`}
           initial='hidden'
