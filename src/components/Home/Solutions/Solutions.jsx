@@ -42,9 +42,10 @@ const Solutions = () => {
   }
 
   function sendToServer(obj) {
+    console.log(obj);
     try {
-      let res = axios.post("https://kanatik6.pythonanywhere.com/message/messages/", obj)
-      console.log(res)
+      let res = axios.post("https://kanatik6.pythonanywhere.com/message/messages/", obj);
+      let sheets = axios.post("https://sheet.best/api/sheets/3e516e15-23a9-44de-a127-c74fc0bf5227", obj );
     }
     catch (e) {
       console.log(res)
@@ -60,6 +61,7 @@ const Solutions = () => {
     try {
       let res = await axios.get("https://kanatik6.pythonanywhere.com/message/quick_project_start/")
       setText(res.data)
+      console.log("123")
     } catch (e) {
       console.log(e)
     }
