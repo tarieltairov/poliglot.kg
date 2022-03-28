@@ -14,7 +14,7 @@ const Header = ({ inView }) => {
           <div className={style.logo}>
             <Link href="/">
 
-              <h2>TA TRAINS INC</h2>
+              <h2>TA TRANS INC</h2>
             </Link>
           </div>
 
