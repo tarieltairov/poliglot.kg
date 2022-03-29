@@ -8,22 +8,20 @@ const Footer = () => {
     <footer className={style.footer}>
       <div className="container">
         <div className={style.blocks}
-        initial='hidden'
-        whileInView='visible'
-        transition={{ duration: 0.5 }}
-        variants={{
-          visible: { opacity: 1, y: 0 },
-          hidden: { opacity: 0, y: -100 },
-        }}
+          initial='hidden'
+          whileInView='visible'
+          transition={{ duration: 0.5 }}
+          variants={{
+            visible: { opacity: 1, y: 0 },
+            hidden: { opacity: 0, y: -100 },
+          }}
         >
           <div className={style.blockFooter}>
             <div className={style.logoBlock}>
-              <Image width={33} height={36} src={Lofo} />
-              <h2>Ta Trains Inc</h2>
+              <h2>Ta Trans Inc</h2>
             </div>
             <p>
-              We offer innovative solutions <br />
-              for your actual problems
+              No road is long whith good company
             </p>
           </div>
           <div className={style.blockFooter}>
@@ -35,21 +33,20 @@ const Footer = () => {
           </div>
           <div className={style.blockFooter}>
             <h3>Contacts</h3>
-            <a href="mailto: hello@zettasoft.io">lorem</a>
-            <a
-              rel="noreferrer noopener"
-              target="_blank"
-              href="https://www.google.com/maps/place/Bishkek"
-            >
-              Central Asia
+            <a href="mailto:hiring@tatransinc.com">hiring@tatransinc.com</a>
+            <a href="tel:773-435-9283">
+              773-435-9283
             </a>
+            <p>
+              701 Lee St Suite 460, <br /> Des Plaines, IL 60016
+            </p>
             <div className={style.socialMedia}>
               <a
                 rel="noreferrer noopener"
                 target="_blank"
                 href="https://instagram.com/tatransinc?utm_medium=copy_link"
               >
-                <Image src={Insta} width={50} height={50}/>
+                <Image src={Insta} width={50} height={50} />
               </a>
             </div>
           </div>

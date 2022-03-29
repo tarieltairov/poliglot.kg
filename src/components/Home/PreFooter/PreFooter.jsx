@@ -22,7 +22,7 @@ const PreFooter = () => {
             hidden: { opacity: 0, x: -100 },
           }}
         >
-          Lorem ipsum dolor sit amet consectetur
+          We can do great things
         </p>
         <a href="/#contacts">
           <button
@@ -33,7 +33,7 @@ const PreFooter = () => {
             visible: { opacity: 1, y: 0 },
             hidden: { opacity: 0, y: -100 },
           }}
-          >Contact Us</button>
+          >Apply</button>
         </a>
       </div>
     </div>
