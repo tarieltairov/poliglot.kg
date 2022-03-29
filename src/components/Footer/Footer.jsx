@@ -1,8 +1,8 @@
 import React from "react";
 import style from "./Footer.module.scss";
-import Lofo from "../../assets/new/logo.png"
 import Insta from "../../assets/new/insta.png"
 import Image from "next/image";
+import facebook from "../../assets/new/facebook.png"
 const Footer = () => {
   return (
     <footer className={style.footer}>
@@ -47,6 +47,9 @@ const Footer = () => {
                 href="https://instagram.com/tatransinc?utm_medium=copy_link"
               >
                 <Image src={Insta} width={50} height={50} />
+              </a>
+              <a style={{marginTop: "3px"}} href="https://www.facebook.com/TA-Trans-Inc-100493832503315/">
+                <Image src={facebook} width={40} height={40}/>
               </a>
             </div>
           </div>
