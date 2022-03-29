@@ -36,7 +36,6 @@
   font-weight: 600;
   font-size: 30.056px;
   line-height: 41px;
-  margin-left: 12px;
 }
 
 .logoBlock p {
@@ -50,14 +49,16 @@
   max-width: 90px;
   min-width: 90px;
   display: flex;
-  justify-content: center;
-  margin: 20px 0;
+  justify-content: flex-start;
 }
 
 .blockFooter {
   display: flex;
   flex-direction: column;
   margin: 0 10px;
+  a{
+    margin-bottom: 10px;
+  }
 
   @media (max-width: 768px) {
     align-items: center;

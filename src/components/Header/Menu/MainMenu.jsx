@@ -100,7 +100,7 @@ export const MainMenu = () => {
               href="/"
               style={{ textDecoration: "none", color: "white", marginTop: "5px" }}
             >
-              <h3>Ta Trains Inc</h3>
+              <h3>Ta Trans Inc</h3>
             </a>
           </div>
 

@@ -91,7 +91,6 @@ const Services = () => {
             <p>
               {text[0]?.descriptions}
             </p>
-            <a href="#"> Find out more </a>
           </div>
           <div className={`${style.block}`}
             initial='hidden'
@@ -129,7 +128,6 @@ const Services = () => {
             <p>
             {text[1]?.descriptions}
             </p>
-            <a href="#"> Find out more </a>
           </div>
         </div>
         <div className={style.miniBlocks}
@@ -179,7 +177,6 @@ const Services = () => {
             </svg>
             <h2>{text[2]?.title}</h2>
             <p>{text[2]?.descriptions}</p>
-            <a href="#"> Find out more </a>
           </div>
           <div className={`${style.miniBlock}`}>
             <svg
@@ -208,7 +205,6 @@ const Services = () => {
             <p>
             {text[3]?.descriptions}
             </p>
-            <a href="#"> Find out more </a>
           </div>
           <div className={style.miniBlock}>
             <svg
@@ -259,7 +255,6 @@ const Services = () => {
             </svg>
             <h2>{text[4]?.title}</h2>
             <p>{text[4]?.descriptions}</p>
-            <a href="#"> Find out more </a>
           </div>
         </div>
       </div>

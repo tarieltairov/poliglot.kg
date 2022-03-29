@@ -6,6 +6,8 @@ import ContentHeadTitle from "../../components/ContentHeadTitlte/ContentHeadTitl
 import { TextField } from "@mui/material";
 import Radio from '@mui/material/Radio';
 import axios from "axios";
+import { toast, ToastContainer } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css';
 const Solutions = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -35,20 +37,19 @@ const Solutions = () => {
         setYear(''),
         setPhone(''),
         setSelectedValue('')
-        setTimeout(() => {
-          alert('Data was send')
-        }, 1000);
     }
   }
 
-  function sendToServer(obj) {
+  async function sendToServer(obj) {
     console.log(obj);
+    let sheets = axios.post("https://sheet.best/api/sheets/3e516e15-23a9-44de-a127-c74fc0bf5227", obj);
     try {
-      let res = axios.post("https://kanatik6.pythonanywhere.com/message/messages/", obj);
-      let sheets = axios.post("https://sheet.best/api/sheets/3e516e15-23a9-44de-a127-c74fc0bf5227", obj );
+      await axios.post("https://kanatik6.pythonanywhere.com/message/messages/", obj);
+      toast.success("Your data has been successfully sent for processing")
     }
     catch (e) {
-      console.log(res)
+      console.log(e)
+      toast.error("An unexpected error has occurred")
     }
 
   }
@@ -79,7 +80,7 @@ const Solutions = () => {
             hidden: { opacity: 0, scale: 0 },
           }}
         >
-          <ContentHeadTitle title={"QUICK PROJECT START"} centered />
+          <ContentHeadTitle title={"QUICK HIRING PROCESS"} centered />
         </div>
         <div className={style.blocks}
           initial='hidden'
@@ -325,13 +326,13 @@ const Solutions = () => {
           </div>
           <div className={style.inputBlock}>
             <div className={style.inputBlock_first}>
-              <TextField id="Name" label="Name" value={name} variant="outlined" onChange={(e) => setName(e.target.value)} className={style.io} />
-              <TextField id="Email" label="Email" value={email} variant="outlined" type="email" onChange={(e) => setEmail(e.target.value)} />
+              <TextField autoComplete="off" id="Name" label="Name" value={name} variant="outlined" onChange={(e) => setName(e.target.value)} className={style.io} />
+              <TextField autoComplete="off" id="Email" label="Email" value={email} variant="outlined" type="email" onChange={(e) => setEmail(e.target.value)} />
             </div>
             <div className={style.inputBlock_second}>
 
-              <TextField id="Years" label="Years of Experience" value={year} type="number" variant="outlined" onChange={(e) => setYear(e.target.value)} className={style.io} />
-              <TextField id="Phone number" label="Phone number" value={phone} ariant="outlined" onChange={(e) => setPhone(e.target.value)} />
+              <TextField autoComplete="off" id="Years" label="Years of Experience" value={year} type="number" variant="outlined" onChange={(e) => setYear(e.target.value)} className={style.io} />
+              <TextField  autoComplete="off" id="Phone number" label="Phone number" value={phone} ariant="outlined" onChange={(e) => setPhone(e.target.value)} />
 
             </div>
             <h5>Position</h5>
@@ -365,6 +366,7 @@ const Solutions = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

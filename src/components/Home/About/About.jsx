@@ -136,7 +136,7 @@ const About = () => {
             </div>
             <div className={style.buttons}>
               <a href="/#contacts">
-                <button>Contact Us</button>
+                <button>Apply now</button>
               </a>
             </div>
           </div>
