@@ -8,7 +8,7 @@ const Header = ({ inView }) => {
       className={`${style.mainHeader} ${inView ? style.mainHeaderBlack : style.mainHeaderWhite
         }`}
     >
-      <div className={`container`}>
+      <div>
         <div className={style.header}
         >
           <div className={style.logo}>
