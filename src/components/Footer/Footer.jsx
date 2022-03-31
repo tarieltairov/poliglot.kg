@@ -21,7 +21,7 @@ const Footer = () => {
               <h2>Ta Trans Inc</h2>
             </div>
             <p>
-              No road is long whith good company
+              No road is long with good company
             </p>
           </div>
           <div className={style.blockFooter}>

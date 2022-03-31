@@ -64,14 +64,14 @@ const menuItems = [
     title: "CONTACTS",
     link: "/#contacts",
   },
-  {
-    id: "mainMenuItem-5",
-    title: "SOLUTIONS",
-    link: "/#solutions",
-  },
+  // {
+  //   id: "mainMenuItem-5",
+  //   title: "SOLUTIONS",
+  //   link: "/#solutions",
+  // },
   {
     id: "mainMenuItem-6",
-    title: "ABOUT",
+    title: "ABOUT US",
     link: "/#about",
   },
 ];
