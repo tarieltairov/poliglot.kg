@@ -50,7 +50,7 @@ function Analytics() {
               +
             </div>
             <p className={style.analytics__simpleText}>
-              Happy <br /> clients
+              Happy <br /> drivers
             </p>
           </div>
           <div className={style.analytics__wrapper}>
@@ -61,7 +61,7 @@ function Analytics() {
               k+
             </div>
             <p className={style.analytics__simpleText}>
-              Lines <br /> of code
+              Miles <br /> driven
             </p>
           </div>
           <div className={style.analytics__wrapper}>
