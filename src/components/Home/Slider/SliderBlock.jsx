@@ -5,7 +5,7 @@ import { Navigation, Pagination } from 'swiper';
 import ArrowLeft from '../../../assets/svg/Icon-leftArrow.svg';
 import ArrowRight from '../../../assets/svg/Icon-rightArrow.svg';
 import Image from 'next/image';
-
+import { motion } from 'framer-motion';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -14,26 +14,29 @@ import ContentHeadTitle from '../../components/ContentHeadTitlte/ContentHeadTitl
 import axios from 'axios';
 
 const Slider = () => {
-  const [text, setText] = useState('')
+  const [text, setText] = useState('');
 
   useEffect(() => {
-    getText1()
-  }, [])
+    getText1();
+  }, []);
 
   async function getText1() {
     try {
-      let res = await axios.get("https://kanatik6.pythonanywhere.com/message/comments/")
-      console.log(res)
-      setText(res.data)
+      let res = await axios.get(
+        'https://kanatik6.pythonanywhere.com/message/comments/'
+      );
+      console.log(res);
+      setText(res.data);
     } catch (e) {
-      console.log(e)
+      console.log(e);
     }
   }
 
   return (
     <div className={style.slider_main}>
       <div className='container'>
-        <div className={style.heading}
+        <motion.div
+          className={style.heading}
           initial='hidden'
           whileInView='visible'
           transition={{ duration: 0.5 }}
@@ -43,8 +46,9 @@ const Slider = () => {
           }}
         >
           <ContentHeadTitle title='WHAT OUR DRIVERS SAY' centered />
-        </div>
-        <div className={`sliderWrapper ${style.sliderWrapper}`}
+        </motion.div>
+        <motion.div
+          className={`sliderWrapper ${style.sliderWrapper}`}
           initial='hidden'
           whileInView='visible'
           transition={{ duration: 0.5 }}
@@ -70,11 +74,7 @@ const Slider = () => {
             className='mySwiper'
           >
             <SwiperSlide className={style.slider}>
-              <p>
-
-                {text[0]?.descriptions}
-
-              </p>
+              <p>{text[0]?.descriptions}</p>
               <div className={style.hr} />
               <h3>{text[0]?.title}</h3>
               <div className={style.quotes}>
@@ -145,9 +145,7 @@ const Slider = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide className={style.slider}>
-              <p>
-
-                {text[1]?.descriptions}              </p>
+              <p>{text[1]?.descriptions} </p>
 
               <hr />
               <h3>{text[1]?.title}</h3>
@@ -220,8 +218,7 @@ const Slider = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide className={style.slider}>
-              <p>
-                {text[2]?.descriptions}               </p>
+              <p>{text[2]?.descriptions} </p>
               <hr />
               <h3>{text[2]?.title} </h3>
 
@@ -296,7 +293,7 @@ const Slider = () => {
           <div className={'next'}>
             <Image src={ArrowRight} />
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
