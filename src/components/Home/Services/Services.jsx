@@ -27,8 +27,8 @@ const Services = () => {
           whileInView='visible'
           transition={{ duration: 0.5 }}
           variants={{
-            visible: { scale: 1, x: 0 },
-            hidden: { scale: 0, x: 500 },
+            visible: { opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0 },
           }}
           className={style.heading}
         >
