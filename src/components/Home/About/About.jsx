@@ -82,8 +82,8 @@ const About = () => {
               whileInView='visible'
               transition={{ duration: 0.5 }}
               variants={{
-                visible: { opacity: 1, x: 0 },
-                hidden: { opacity: 0, x: -200 },
+                visible: { opacity: 1, scale: 1 },
+                hidden: { opacity: 0, scale: 0 },
               }}
               className={style.heading}
             >
@@ -107,8 +107,8 @@ const About = () => {
                 whileInView='visible'
                 transition={{ duration: 0.5 }}
                 variants={{
-                  visible: { opacity: 1, x: 0 },
-                  hidden: { opacity: 0, x: -200 },
+                  visible: { opacity: 1, scale: 1 },
+                  hidden: { opacity: 0, scale: 0 },
                 }}
               >
                 <Image src={BoltIcon} />
@@ -120,8 +120,8 @@ const About = () => {
                 whileInView='visible'
                 transition={{ duration: 0.5 }}
                 variants={{
-                  visible: { opacity: 1, x: 0 },
-                  hidden: { opacity: 0, x: -200 },
+                  visible: { opacity: 1, scale: 1 },
+                  hidden: { opacity: 0, scale: 0 },
                 }}
               >
                 <Image src={BoltIcon} />
