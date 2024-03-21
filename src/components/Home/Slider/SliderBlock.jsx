@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import style from './Slider.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper';
@@ -11,26 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import ContentHeadTitle from '../../components/ContentHeadTitlte/ContentHeadTitle';
 
-import axios from 'axios';
-
 const Slider = () => {
-  const [text, setText] = useState('');
-
-  useEffect(() => {
-    getText1();
-  }, []);
-
-  async function getText1() {
-    try {
-      let res = await axios.get(
-        'https://kanatik6.pythonanywhere.com/message/comments/'
-      );
-      console.log(res);
-      setText(res.data);
-    } catch (e) {
-      console.log(e);
-    }
-  }
 
   return (
     <div className={style.slider_main}>
@@ -74,9 +55,11 @@ const Slider = () => {
             className='mySwiper'
           >
             <SwiperSlide className={style.slider}>
-              <p>{text[0]?.descriptions}</p>
+              <p>descriptions1 - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, odit? 
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, odit?
+              </p>
               <div className={style.hr} />
-              <h3>{text[0]?.title}</h3>
+              <h3>title1 - Lorem ipsum dolor sit amet.</h3>
               <div className={style.quotes}>
                 <svg
                   width='96'
@@ -145,11 +128,10 @@ const Slider = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide className={style.slider}>
-              <p>{text[1]?.descriptions} </p>
-
-              <hr />
-              <h3>{text[1]?.title}</h3>
-
+              <p>descriptions2 - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, odit? 
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, odit? </p>
+              <div className={style.hr} />
+              <h3>title2 - Lorem ipsum dolor sit amet.</h3>
               <div className={style.quotes}>
                 <svg
                   width='96'
@@ -218,9 +200,10 @@ const Slider = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide className={style.slider}>
-              <p>{text[2]?.descriptions} </p>
-              <hr />
-              <h3>{text[2]?.title} </h3>
+              <p>descriptions3 - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, odit?
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, odit? </p>
+              <div className={style.hr} />
+              <h3>title3 - Lorem ipsum dolor sit amet. </h3>
 
               <div className={style.quotes}>
                 <svg

@@ -2,6 +2,9 @@ import React from "react";
 import style from "./Header.module.scss";
 import { MainMenu } from "./Menu/MainMenu";
 import Link from "next/link";
+import Image from "next/image";
+import logo from '../../assets/poliglot/snapedit_1711026401124.png';
+
 const Header = ({ inView }) => {
   return (
     <header
@@ -13,15 +16,15 @@ const Header = ({ inView }) => {
         >
           <div className={style.logo}>
             <Link href="/">
-
-              <h2>TA TRANS INC</h2>
+              {/* <Image src={logo} /> */}
+              <h2>Полиграф-Бишкек</h2>
             </Link>
           </div>
 
           <div className={style.links}>
-            <Link href="/"><p>HOME</p></Link>
-            <Link href="/#about"><p>ABOUT US</p></Link>
-            <Link href="/#services"><p>SERVICES</p></Link>
+            <Link href="/"><p>ГЛАВНАЯ</p></Link>
+            <Link href="/#about"><p>О НАС</p></Link>
+            <Link href="/#services"><p>УСЛУГИ</p></Link>
             {/* <Link href="/#solutions"><p>SOLUTIONS</p></Link> */}
             <Link href="/#contacts"><button className={style.button}>
               Apply now

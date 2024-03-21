@@ -1,24 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import style from './Services.module.scss';
 import ContentHeadTitle from '../../components/ContentHeadTitlte/ContentHeadTitle';
 import { motion } from 'framer-motion';
-import axios from 'axios';
 
 const Services = () => {
-  const [text, setText] = useState('');
-  useEffect(() => {
-    getText1();
-  }, []);
-  async function getText1() {
-    try {
-      let res = await axios.get(
-        'https://kanatik6.pythonanywhere.com/message/our_services/'
-      );
-      setText(res.data);
-    } catch (e) {
-      console.log(e);
-    }
-  }
   return (
     <div id={'services'} className={style.services}>
       <div className='container'>
@@ -94,9 +79,9 @@ const Services = () => {
               />
             </svg>
 
-            <h2 style={{ marginTop: '40px' }}>{text[0]?.title}</h2>
+            <h2 style={{ marginTop: '40px' }}>title - Lorem ipsum dolor sit amet.</h2>
 
-            <p>{text[0]?.descriptions}</p>
+            <p>descriptions - Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti tempora voluptas dolores ex consequuntur dolor.</p>
           </motion.div>
           <motion.div
             className={`${style.block}`}
@@ -131,9 +116,9 @@ const Services = () => {
               />
             </svg>
 
-            <h2 style={{ marginTop: '40px' }}>{text[1]?.title}</h2>
+            <h2 style={{ marginTop: '40px' }}>title 2 - Lorem ipsum dolor sit amet.</h2>
 
-            <p>{text[1]?.descriptions}</p>
+            <p>descriptions 2 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti tempora voluptas dolores ex consequuntur dolor.</p>
           </motion.div>
         </div>
         <motion.div
@@ -182,8 +167,8 @@ const Services = () => {
                 strokeLinejoin='round'
               />
             </svg>
-            <h2>{text[2]?.title}</h2>
-            <p>{text[2]?.descriptions}</p>
+            <h2>title 3 - Lorem ipsum dolor sit amet.</h2>
+            <p>descriptions 3 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sapiente ab cupiditate praesentium cum nisi.</p>
           </div>
           <div className={`${style.miniBlock}`}>
             <svg
@@ -208,8 +193,8 @@ const Services = () => {
                 strokeLinejoin='round'
               />
             </svg>
-            <h2>{text[3]?.title}</h2>
-            <p>{text[3]?.descriptions}</p>
+            <h2>title 4 - Lorem ipsum dolor sit amet.</h2>
+            <p>descriptions 4 - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, ipsum.</p>
           </div>
           <div className={style.miniBlock}>
             <svg
@@ -258,8 +243,8 @@ const Services = () => {
                 className={style.sqStroke}
               />
             </svg>
-            <h2>{text[4]?.title}</h2>
-            <p>{text[4]?.descriptions}</p>
+            <h2>title 5 - Lorem ipsum dolor sit amet.</h2>
+            <p>descriptions 5  - Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo, earum!</p>
           </div>
         </motion.div>
       </div>

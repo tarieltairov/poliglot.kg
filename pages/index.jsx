@@ -7,6 +7,9 @@ import PreFooter from '../src/components/Home/PreFooter/PreFooter';
 import React from 'react';
 import Hero from '../src/components/Home/Hero/Hero';
 import Analytics from '../src/components/Home/Analytics/Analytics';
+import Expertice from '../src/components/Home/Expertise/Expertise';
+import Technologies from '../src/components/Home/Techonolgies/Technologies';
+
 
 function Home() {
   return (
@@ -14,10 +17,12 @@ function Home() {
       <Hero />
       <About />
       <Services />
-      <Solutions />
-      <Analytics />
       <Slider />
       <PreFooter />
+      {/* <Expertice />
+      <Technologies />
+      <Solutions />
+      <Analytics /> */}
     </MainLayout>
   );
 }

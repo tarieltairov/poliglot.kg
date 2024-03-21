@@ -1,36 +1,20 @@
 import { Carousel } from "react-bootstrap";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import style from "./Hero.module.scss";
 import Link from "next/link"
 import Image from "next/image";
 import ft from "../../../assets/new/ft.jpg"
 import ft2 from "../../../assets/new/ft2.jpg"
 import truck1 from "../../../assets/new/truck1.jpg"
-import axios from "axios";
 
-const Hero = ({ ref }) => {
+const Hero = () => {
   const [index, setIndex] = useState(0);
-  const [text, setText] = useState("")
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
-  useEffect(() => {
-    getText()
-  }, [])
-  async function getText() {
-    try {
-      let res = await axios.get("https://kanatik6.pythonanywhere.com/message/home_page/")
-      setText(res.data[0])
-    } catch (e) {
-      console.log(e)
-    }
-  }
   return (
 
     <div className={style.hh}>
       <div className={style.toto}>
-        <h1>{text?.title}</h1>
-        <p>{text?.descriptions}</p>
+        <h1>title</h1>
+        <p>descriptions - Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, commodi?</p>
         <Link href="/#contacts">
           <button >
             Apply now
@@ -38,7 +22,7 @@ const Hero = ({ ref }) => {
         </Link>
 
       </div>
-      <Carousel activeIndex={index} onSelect={handleSelect} className={style.slider}>
+      <Carousel activeIndex={index} onSelect={setIndex} className={style.slider}>
         <Carousel.Item className={style.lol}>
           <Image src={truck1} className={style.img} />
           <Carousel.Caption>
