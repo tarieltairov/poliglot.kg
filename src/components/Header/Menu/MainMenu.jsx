@@ -5,11 +5,8 @@ import { MenuToggle } from "./MenuToggle";
 import { Navigation } from "./Navigation";
 import { useMediaQuery } from "react-responsive";
 import Image from "next/image";
-import LinkedinIcon from "../../../assets/svg/Icon-Linkedin.svg";
-import BehanceIcon from "../../../assets/svg/Icon-behance.svg";
-import ClutchIcon from "../../../assets/svg/Icon-Clutch.svg";
-import Insta from "../../../assets/new/insta.png"
-import UpWorkIcon from "../../../assets/svg/Icon-Upwork.svg";
+import WhatsApp from "../../../assets/poliglot/WhatsApp_icon.png";
+
 const footerVariants = {
   open: {
     y: 0,
@@ -53,8 +50,9 @@ export const MainMenu = () => {
 
   const sidebar = {
     open: (height = 1000) => ({
-      clipPath: `circle(${height * 2 + 200}px at ${isSmallScreen ? "29.1px" : "88.5%"
-        } 30px)`,
+      clipPath: `circle(${height * 2 + 200}px at ${
+        isSmallScreen ? "29.1px" : "88.5%"
+      } 30px)`,
       transition: {
         type: "spring",
         stiffness: 20,
@@ -89,18 +87,21 @@ export const MainMenu = () => {
             <a
               rel="noreferrer noopener"
               target="_blank"
-              href="https://www.instagram.com/"
+              href="https://wa.me/+996995696932"
             >
-              <Image src={Insta} width={50} height={50} className="insta" />
+              <Image src={WhatsApp} width={50} height={50} className="insta" />
             </a>
 
             <a
               rel="noreferrer noopener"
-              target="_blank"
               href="/"
-              style={{ textDecoration: "none", color: "white", marginTop: "5px" }}
+              style={{
+                textDecoration: "none",
+                color: "white",
+                marginTop: "5px",
+              }}
             >
-              <h3>Ta Trans Inc</h3>
+              <h3>Полиграф-Бишкек</h3>
             </a>
           </div>
 
@@ -108,18 +109,18 @@ export const MainMenu = () => {
             <a
               rel="noreferrer noopener"
               target="_blank"
-              href="#"
-              style={{ color: 'white' }}
+              href="mailto:poligraph-bishkek@mail.ru"
+              style={{ color: "white" }}
             >
-              hello@example.io
+              poligraph-bishkek@mail.ru
             </a>
             <a
-              style={{ color: 'white' }}
+              style={{ color: "white" }}
               rel="noreferrer noopener"
               target="_blank"
               href="https://www.google.com/maps/place/Bishkek"
             >
-              Central Asia
+              Bishkek
             </a>
           </div>
         </motion.div>

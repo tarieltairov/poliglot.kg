@@ -41,7 +41,7 @@ export const Navigation = ({ toggle }) => (
         key={id}
       >
         <Link href={link}>
-          <a style={{textDecoration: 'none'}}>{title}</a>
+          <a style={{ textDecoration: "none" }}>{title}</a>
         </Link>
       </motion.li>
     ))}
@@ -51,27 +51,32 @@ export const Navigation = ({ toggle }) => (
 const menuItems = [
   {
     id: "mainMenuItem-1",
-    title: "HOME",
+    title: "Главная",
     link: "/",
   },
   {
     id: "mainMenuItem-2",
-    title: "SERVICES",
-    link: "/#services",
+    title: "Обо мне",
+    link: "/#about",
   },
   {
     id: "mainMenuItem-3",
-    title: "CONTACTS",
-    link: "/#contacts",
+    title: "Услуги",
+    link: "/#services",
   },
-  // {
-  //   id: "mainMenuItem-5",
-  //   title: "SOLUTIONS",
-  //   link: "/#solutions",
-  // },
+  {
+    id: "mainMenuItem-4",
+    title: "Преимущества",
+    link: "/#advantages",
+  },
+  {
+    id: "mainMenuItem-5",
+    title: "Отзывы",
+    link: "/#clients",
+  },
   {
     id: "mainMenuItem-6",
-    title: "ABOUT US",
-    link: "/#about",
+    title: "Контакты",
+    link: "/#contacts",
   },
 ];
