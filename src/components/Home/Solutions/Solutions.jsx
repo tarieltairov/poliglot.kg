@@ -4,8 +4,34 @@ import DottedSqIcon from "../../../assets/svg/Icon-dottedSQ.svg";
 import Image from "next/image";
 import ContentHeadTitle from "../../components/ContentHeadTitlte/ContentHeadTitle";
 import { motion } from "framer-motion";
+import whatsapp from "../../../assets/poliglot/whatsapp.png";
+import phone from "../../../assets/poliglot/phone.png";
+import mail from "../../../assets/poliglot/mail.png";
 
 const Solutions = () => {
+  const links = [
+    {
+      text: "+996 995 696 932",
+      icon: whatsapp,
+      link: "https://wa.me/+996995696932",
+    },
+    {
+      text: "+996 500 100 045",
+      icon: phone,
+      link: "tel:+996500100045",
+    },
+    {
+      text: "poligraph-bishkek@mail.ru",
+      icon: mail,
+      link: "mailto:poligraph-bishkek@mail.ru",
+    },
+    {
+      text: "+996 995 696 932",
+      icon: phone,
+      link: "tel:+996 995 696 932",
+    },
+  ];
+
   return (
     <div id={"contacts"} className="container">
       <div className={style.solutions}>
@@ -33,8 +59,12 @@ const Solutions = () => {
           }}
         >
           <div className={style.titleBlock}>
-            <h2>Apply now</h2>
-            <p>Let’s contact with us!</p>
+            {links.map((item, index) => (
+              <a href={item.link} key={index}>
+                <Image src={item.icon} />
+                {item.text}
+              </a>
+            ))}
           </div>
           <div className={style.rightDotted}>
             <Image src={DottedSqIcon} />

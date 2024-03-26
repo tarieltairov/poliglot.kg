@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Head from "next/head";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";

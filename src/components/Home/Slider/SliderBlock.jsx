@@ -81,8 +81,8 @@ const Slider = () => {
             modules={[Navigation, Pagination]}
             className="mySwiper"
           >
-            {slides.map((i) => (
-              <SwiperSlide className={style.slider}>
+            {slides.map((i, index) => (
+              <SwiperSlide className={style.slider} key={index}>
                 <p>{i.description}</p>
                 <div className={style.hr} />
                 <h3>{i.name}</h3>
@@ -110,12 +110,9 @@ const Slider = () => {
                         width="95.8969"
                         height="91.2734"
                         filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB"
+                        colorInterpolationFilters="sRGB"
                       >
-                        <feFlood
-                          flood-opacity="0"
-                          result="BackgroundImageFix"
-                        />
+                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
                         <feColorMatrix
                           in="SourceAlpha"
                           type="matrix"
@@ -149,8 +146,8 @@ const Slider = () => {
                         y2="69.4304"
                         gradientUnits="userSpaceOnUse"
                       >
-                        <stop stop-color="red" />
-                        <stop offset="1" stop-color="red" />
+                        <stop stopColor="red" />
+                        <stop offset="1" stopColor="red" />
                       </linearGradient>
                     </defs>
                   </svg>

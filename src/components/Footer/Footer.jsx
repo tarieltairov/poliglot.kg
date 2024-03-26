@@ -57,8 +57,6 @@ const Footer = () => {
             </div>
           </div>
         </motion.div>
-        <div className={style.footerHr} />
-        <div className={style.footerText}></div>
       </div>
     </footer>
   );

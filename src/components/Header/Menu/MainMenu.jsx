@@ -3,7 +3,6 @@ import { useEffect, useRef } from "react";
 import { motion, useCycle } from "framer-motion";
 import { MenuToggle } from "./MenuToggle";
 import { Navigation } from "./Navigation";
-import { useMediaQuery } from "react-responsive";
 import Image from "next/image";
 import WhatsApp from "../../../assets/poliglot/WhatsApp_icon.png";
 
@@ -29,6 +28,7 @@ const style = {
   display: "flex",
   alignItems: "center",
   gridGap: "64px",
+  flexWrap: "wrap",
 };
 
 export const useDimensions = (ref) => {
@@ -46,13 +46,10 @@ export const MainMenu = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
-  const isSmallScreen = useMediaQuery({ query: "(max-width: 992px)" });
 
   const sidebar = {
     open: (height = 1000) => ({
-      clipPath: `circle(${height * 2 + 200}px at ${
-        isSmallScreen ? "29.1px" : "88.5%"
-      } 30px)`,
+      clipPath: `circle(${height * 2 + 200}px at 88.5% 30px)`,
       transition: {
         type: "spring",
         stiffness: 20,
@@ -60,7 +57,7 @@ export const MainMenu = () => {
       },
     }),
     closed: {
-      clipPath: `circle(0px at ${isSmallScreen ? "29.1px" : "88.5%"} 30px)`,
+      clipPath: `circle(0px at 88.5% 30px)`,
       transition: {
         delay: 0.5,
         type: "spring",

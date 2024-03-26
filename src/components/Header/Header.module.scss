@@ -115,7 +115,7 @@
     font-weight: 500;
     margin-right: 11px;
     &:hover {
-      color: red;
+      color: orangered;
     }
   }
   @media (max-width: 800px) {
@@ -134,7 +134,7 @@
   width: 140px;
   height: 40px;
   border-radius: 35px;
-  background-color: red;
+  background: linear-gradient(97.01deg, orangered -4.32%, red 89.23%);
   color: white;
   margin-bottom: 20px;
 }

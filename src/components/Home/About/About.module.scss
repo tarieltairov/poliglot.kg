@@ -2,7 +2,7 @@
   padding: 100px 0;
   width: 100%;
   height: auto;
-  @media (max-width: 500px){
+  @media (max-width: 500px) {
     padding-bottom: 0px;
   }
   .block {
@@ -83,7 +83,7 @@
             font-weight: 600;
             font-size: 14px;
             line-height: 17px;
- 
+
             background: -webkit-linear-gradient(
               97.01deg,
               orangered -4.32%,
@@ -174,13 +174,12 @@
   }
 }
 
-.slider{
+.slider {
   margin-top: 150px;
-  @media (max-width: 1024px){
+  @media (max-width: 1024px) {
     margin-bottom: 150px !important;
   }
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     margin: 0px !important;
   }
 }
-

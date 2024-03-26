@@ -54,8 +54,9 @@ const About = () => {
               >
                 Специалист-полиграфолог
               </motion.h4>
-              {aboutText.map((item) => (
+              {aboutText.map((item, index) => (
                 <motion.div
+                  key={index}
                   className={style.contentBlock}
                   initial="hidden"
                   whileInView="visible"

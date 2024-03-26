@@ -14,7 +14,7 @@ const Header = ({ inView }) => {
     >
       <div>
         <div className={style.header}>
-          <div className={style.logo}>
+          <div className={`${style.logo} ${inView && style.logoWhiteBg}`}>
             <Link href="/">
               <Image src={logo} />
             </Link>

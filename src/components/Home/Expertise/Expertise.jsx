@@ -1,13 +1,23 @@
 import React from "react";
 import ContentHeadTitle from "../../components/ContentHeadTitlte/ContentHeadTitle";
 import classes from "./Expertise.module.scss";
+import { motion } from "framer-motion";
 
 function Expertise() {
   return (
     <div id={"advantages"} className="container">
-      <div className={classes.heading}>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.5 }}
+        variants={{
+          visible: { opacity: 1, scale: 1 },
+          hidden: { opacity: 0, scale: 0 },
+        }}
+        className={classes.heading}
+      >
         <ContentHeadTitle title="ПРЕИМУЩЕСТВА ПЕРЕД ДРУГИМИ" centered />
-      </div>
+      </motion.div>
       <div className={classes.card_section}>
         <div className={classes.first_card}>
           <svg
@@ -35,8 +45,8 @@ function Expertise() {
                 y2="40.7826"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#387EB8" />
-                <stop offset="1" stop-color="#366994" />
+                <stop stopColor="#387EB8" />
+                <stop offset="1" stopColor="#366994" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_761_120"
@@ -46,8 +56,8 @@ function Expertise() {
                 y2="63.6533"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#FFE052" />
-                <stop offset="1" stop-color="#FFC331" />
+                <stop stopColor="#FFE052" />
+                <stop offset="1" stopColor="#FFC331" />
               </linearGradient>
             </defs>
           </svg>
