@@ -64,7 +64,7 @@ const Slider = () => {
           }}
         >
           <div className={"prev"}>
-            <Image src={ArrowLeft} />
+            <Image src={ArrowLeft} alt="ArrowLeft" />
           </div>
           <Swiper
             autoHeight={true}
@@ -154,7 +154,7 @@ const Slider = () => {
             ))}
           </Swiper>
           <div className={"next"}>
-            <Image src={ArrowRight} />
+            <Image src={ArrowRight} alt="ArrowRight" />
           </div>
         </motion.div>
       </div>

@@ -68,7 +68,7 @@ const About = () => {
                     hidden: { opacity: 0, scale: 0 },
                   }}
                 >
-                  <Image src={BoltIcon} />
+                  <Image src={BoltIcon} alt="BoltIcon" />
                   <p>{item.text}</p>
                 </motion.div>
               ))}
@@ -104,10 +104,10 @@ const About = () => {
               className={style.slider}
             >
               <Carousel.Item>
-                <Image src={about1} />
+                <Image src={about1} alt="about1" />
               </Carousel.Item>
               <Carousel.Item>
-                <Image src={about2} />
+                <Image src={about2} alt="about2" />
               </Carousel.Item>
             </Carousel>
           </motion.div>

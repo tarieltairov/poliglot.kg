@@ -24,7 +24,7 @@ const Footer = () => {
         >
           <div className={style.blockFooter}>
             <div className={style.logoBlock}>
-              <Image src={logo} />
+              <Image src={logo} alt="logo" />
             </div>
             <p
               dangerouslySetInnerHTML={{ __html: replaceBr(t("footer.text")) }}
@@ -55,7 +55,7 @@ const Footer = () => {
                 target="_blank"
                 href="https://wa.me/+996995696932"
               >
-                <Image src={whatsapp} width={50} height={50} />
+                <Image src={whatsapp} width={50} height={50} alt="whatsapp" />
               </a>
             </div>
           </div>

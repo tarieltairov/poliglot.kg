@@ -2,7 +2,7 @@ import React from "react";
 import style from "./Hero.module.scss";
 import Link from "next/link";
 import Image from "next/image";
-import dd from "../../../assets/poliglot/7SUp.gif";
+import pulseGif from "../../../assets/poliglot/7SUp.gif";
 import { useTranslation } from "next-i18next";
 const Hero = () => {
   const { t } = useTranslation();
@@ -14,7 +14,7 @@ const Hero = () => {
           <button>{t("hero.btnText")}</button>
         </Link>
       </div>
-      <Image src={dd} />
+      <Image src={pulseGif} alt="main-image" priority />
     </div>
   );
 };

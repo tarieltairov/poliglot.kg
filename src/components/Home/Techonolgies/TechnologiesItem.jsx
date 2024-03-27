@@ -5,7 +5,7 @@ import style from "./Technologies.module.scss";
 const Item = ({ svg, value }) => {
   return (
     <div className={style.stackWrapper}>
-      <Image width={36} height={36} src={svg} />
+      <Image width={36} height={36} src={svg} alt="item-image" />
       <p>{value}</p>
     </div>
   );

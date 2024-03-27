@@ -63,16 +63,16 @@ const Solutions = () => {
           <div className={style.titleBlock}>
             {links.map((item, index) => (
               <a href={item.link} key={index}>
-                <Image src={item.icon} />
+                <Image src={item.icon} alt="images" />
                 {item.text}
               </a>
             ))}
           </div>
           <div className={style.rightDotted}>
-            <Image src={DottedSqIcon} />
+            <Image src={DottedSqIcon} alt="DottedSqIcon" />
           </div>
           <div className={style.leftDotted}>
-            <Image src={DottedSqIcon} />
+            <Image src={DottedSqIcon} alt="DottedSqIcon" />
           </div>
         </motion.div>
       </div>

@@ -90,7 +90,13 @@ export const MainMenu = ({ setIsBurgerOpen }) => {
               target="_blank"
               href="https://wa.me/+996995696932"
             >
-              <Image src={WhatsApp} width={50} height={50} className="insta" />
+              <Image
+                src={WhatsApp}
+                width={50}
+                height={50}
+                className="insta"
+                alt="WhatsApp"
+              />
             </a>
 
             <a

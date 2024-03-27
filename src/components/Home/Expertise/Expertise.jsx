@@ -50,7 +50,7 @@ function Expertise() {
             key={index}
           >
             <div className={classes.image_block}>
-              <Image src={card.icon} />
+              <Image src={card.icon} alt="card" />
             </div>
             <h2>{card.title}</h2>
             <p className={classes.footer_text}>{card.description}</p>

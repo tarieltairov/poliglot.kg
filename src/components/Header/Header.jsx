@@ -31,7 +31,7 @@ const Header = ({ inView }) => {
         <div className={style.header}>
           <div className={style.logo}>
             <Link href="/">
-              <Image src={logo} height={100} />
+              <Image src={logo} height={100} alt="logo" />
             </Link>
             <div className={style.locale}>
               {t("header.navbar.lang")}
