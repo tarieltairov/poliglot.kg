@@ -42,7 +42,7 @@ export const useDimensions = (ref) => {
   return dimensions.current;
 };
 
-export const MainMenu = () => {
+export const MainMenu = ({ setIsBurgerOpen }) => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
@@ -66,6 +66,10 @@ export const MainMenu = () => {
       },
     },
   };
+
+  useEffect(() => {
+    setIsBurgerOpen(isOpen);
+  }, [isOpen]);
 
   return (
     <motion.nav

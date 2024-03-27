@@ -27,20 +27,32 @@
     grid-gap: 13px;
     width: 150px;
     cursor: pointer;
-    h2 {
+    .locale {
+      display: inline-flex;
+      color: white;
+      gap: 10px;
       font-family: "Gilroy", sans-serif;
       font-style: normal;
-      font-weight: 400;
-      font-size: 24.056px;
-      cursor: pointer;
-      &:hover {
-        color: red;
-      }
-      @media (max-width: 992px) {
-        font-size: 21.6857px;
-      }
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+      select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: none;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: white;
 
-      @media (max-width: 768px) {
+        option {
+          color: black;
+        }
+        &:hover {
+          color: orangered;
+        }
       }
     }
   }
@@ -79,8 +91,11 @@
   background: rgba(255, 255, 255, 1);
 
   .logo {
-    h2 {
+    .locale {
       color: #000;
+      select {
+        color: #000;
+      }
     }
   }
 
@@ -114,6 +129,7 @@
     cursor: pointer;
     font-weight: 500;
     margin-right: 11px;
+    margin-bottom: 0;
     &:hover {
       color: orangered;
     }
@@ -136,5 +152,4 @@
   border-radius: 35px;
   background: linear-gradient(97.01deg, orangered -4.32%, red 89.23%);
   color: white;
-  margin-bottom: 20px;
 }

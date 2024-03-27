@@ -7,8 +7,10 @@ import { motion } from "framer-motion";
 import whatsapp from "../../../assets/poliglot/whatsapp.png";
 import phone from "../../../assets/poliglot/phone.png";
 import mail from "../../../assets/poliglot/mail.png";
+import { useTranslation } from "next-i18next";
 
 const Solutions = () => {
+  const { t } = useTranslation();
   const links = [
     {
       text: "+996 995 696 932",
@@ -45,7 +47,7 @@ const Solutions = () => {
             hidden: { opacity: 0, scale: 0 },
           }}
         >
-          <ContentHeadTitle title={"СВЯЗАТЬСЯ СО МНОЙ"} centered />
+          <ContentHeadTitle title={t("contacts.title")} centered />
         </motion.div>
         <motion.div
           id="contacts"

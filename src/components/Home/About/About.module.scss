@@ -182,4 +182,8 @@
   @media (max-width: 768px) {
     margin: 0px !important;
   }
+  img {
+    max-width: 450px;
+    max-height: 300px;
+  }
 }

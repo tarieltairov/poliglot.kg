@@ -2,8 +2,12 @@ import React from "react";
 import style from "./Services.module.scss";
 import ContentHeadTitle from "../../components/ContentHeadTitlte/ContentHeadTitle";
 import { motion } from "framer-motion";
+import { useTranslation } from "next-i18next";
+import replaceBr from "../../../helpers/helper";
 
 const Services = () => {
+  const { t } = useTranslation();
+
   return (
     <div id={"services"} className={style.services}>
       <div className="container">
@@ -17,7 +21,7 @@ const Services = () => {
           }}
           className={style.heading}
         >
-          <ContentHeadTitle title={"МОИ УСЛУГИ"} centered />
+          <ContentHeadTitle title={t("services.title")} centered />
         </motion.div>
         <div className={style.blocks} initial="hidden">
           <motion.div
@@ -54,21 +58,14 @@ const Services = () => {
             </svg>
 
             <h2 style={{ marginTop: "40px" }}>
-              Проверка сотрудников - (кадровый скрининг)
+              {t("services.card1.cardTitle")}
             </h2>
 
-            <p>
-              - Подбор и отбор кадров при приеме на работу в государственных
-              учреждениях и частных компаниях на выявление негативных факторов
-              риска кандидатов. <br />
-              <br />
-              - Внутрикадровая проверка действующих сотрудников, государственных
-              учреждений и частных компаний на выявление факторов риска,
-              связанных с хищением, коррупцией и слива информации. <br />
-              <br />- Помощь в служебных расследованиях на выявление
-              причастности к нарушениям должностных обязанностей и инструкций
-              сотрудников государственных учреждений и частных компаний.
-            </p>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: replaceBr(t("services.card1.cardDesc")),
+              }}
+            ></p>
           </motion.div>
           <motion.div
             className={`${style.block}`}
@@ -104,16 +101,14 @@ const Services = () => {
             </svg>
 
             <h2 style={{ marginTop: "40px" }}>
-              Помощь в расследовании преступлений и принятии решений
+              {t("services.card2.cardTitle")}
             </h2>
 
-            <p>
-              - Помощь в раскрытии преступлений на определение причастности или
-              непричастности лица к совершенному преступлению. <br />
-              <br /> - Определение причастности или непричастности обвиняемого
-              лица к совершенному преступлению на стадии судебного
-              разбирательства.
-            </p>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: replaceBr(t("services.card2.cardDesc")),
+              }}
+            ></p>
           </motion.div>
         </div>
         <motion.div
@@ -149,11 +144,8 @@ const Services = () => {
                 strokeLinejoin="round"
               />
             </svg>
-            <h2>Супружеские измены</h2>
-            <p>
-              - Проверка наличия или отсутствия супружеских измен, при сомнениях
-              и подозрениях друг к другу супружеских пар.
-            </p>
+            <h2>{t("services.card3.cardTitle")}</h2>
+            <p>{t("services.card3.cardDesc")}</p>
           </div>
           <div className={`${style.miniBlock}`}>
             <svg
@@ -178,12 +170,8 @@ const Services = () => {
                 strokeLinejoin="round"
               />
             </svg>
-            <h2>Персонал</h2>
-            <p>
-              - Проверка нянь, домашнего и технического персонала как при приеме
-              на работу, так и входе работы на их добросовестность и
-              порядочность.
-            </p>
+            <h2>{t("services.card4.cardTitle")}</h2>
+            <p>{t("services.card4.cardDesc")}</p>
           </div>
           <div className={style.miniBlock}>
             <svg
@@ -208,8 +196,8 @@ const Services = () => {
                 strokeLinejoin="round"
               />
             </svg>
-            <h2>И другие темы</h2>
-            <p>- Можно сделать проверку на другие различные темы</p>
+            <h2>{t("services.card5.cardTitle")}</h2>
+            <p>{t("services.card5.cardDesc")}</p>
           </div>
         </motion.div>
       </div>

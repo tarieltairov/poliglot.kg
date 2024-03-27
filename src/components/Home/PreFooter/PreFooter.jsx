@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import React from "react";
 import style from "./PreFooter.module.scss";
+import { useTranslation } from "next-i18next";
 
 const PreFooter = () => {
+  const { t } = useTranslation();
+
   return (
     <div className={style.preFooter}>
       <div className={style.whiteBlock}>
@@ -15,7 +18,7 @@ const PreFooter = () => {
             hidden: { opacity: 0, scale: 0 },
           }}
         >
-          Давайте работать вместе
+          {t("preFooter.title")}
         </motion.h2>
         <motion.p
           initial="hidden"
@@ -26,7 +29,7 @@ const PreFooter = () => {
             hidden: { opacity: 0, scale: 0 },
           }}
         >
-          Мы можем достичь истины
+          {t("preFooter.text")}
         </motion.p>
         <a href="/#contacts">
           <motion.button
@@ -38,7 +41,7 @@ const PreFooter = () => {
               hidden: { opacity: 0, scale: 0 },
             }}
           >
-            Связаться
+            {t("preFooter.btnText")}
           </motion.button>
         </a>
       </div>

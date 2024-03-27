@@ -10,32 +10,30 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import ContentHeadTitle from "../../components/ContentHeadTitlte/ContentHeadTitle";
+import { useTranslation } from "next-i18next";
 
 const Slider = () => {
+  const { t } = useTranslation();
+
   const slides = [
     {
-      description:
-        "Нурдин - настоящий профессионал! Его опыт и знания в полиграфии оказались невероятно ценными для нашего дела. Я настоятельно рекомендую его услуги всем, кто ищет объективность и правдивость в сложных ситуациях.",
+      description: t("reviews.description1"),
       name: "Жолдошбеков Алибек",
     },
     {
-      description:
-        "Я очень благодарен Нурдину за его внимательность и профессионализм в работе. Результаты полиграфического анализа помогли нам разрешить долго беспокоящие нас вопросы. Я рекомендую его как надежного специалиста.",
+      description: t("reviews.description2"),
       name: "Касымова Гульзат",
     },
     {
-      description:
-        "Профессионализм и понимание, которые Нурдин проявлял во время нашего полиграфического тестирования, были впечатляющими. Я рекомендую его как специалиста высокого уровня.",
+      description: t("reviews.description3"),
       name: "Исабеков Амантай",
     },
     {
-      description:
-        "Сотрудничество с Нурдином помогло нам получить ясность и понимание в сложных юридических вопросах. Его четкое видение и профессионализм в полиграфии играют важную роль для тех, кто ищет объективные результаты.",
+      description: t("reviews.description4"),
       name: "Токтогулова Жанара",
     },
     {
-      description:
-        "Нурдин - эксперт своего дела! Его глубокие знания в полиграфии и способность работать с самыми сложными случаями делают его незаменимым специалистом. Очень рекомендую!",
+      description: t("reviews.description5"),
       name: "Орозбеков Курманбек",
     },
   ];
@@ -53,7 +51,7 @@ const Slider = () => {
             hidden: { opacity: 0, scale: 0 },
           }}
         >
-          <ContentHeadTitle title="ЧТО ГОВОРЯТ МОИ КЛИЕНТЫ" centered />
+          <ContentHeadTitle title={t("reviews.title")} centered />
         </motion.div>
         <motion.div
           className={`sliderWrapper ${style.sliderWrapper}`}

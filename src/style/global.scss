@@ -4,19 +4,23 @@ html {
   scroll-behavior: smooth;
 }
 
-.carousel-control-prev{
+.next,
+.prev {
+  cursor: pointer;
+}
+.carousel-control-prev {
   display: none !important;
 }
-.carousel-control-next{
+.carousel-control-next {
   display: none !important;
 }
-.next{
-  @media(max-width: 768px){
+.next {
+  @media (max-width: 768px) {
     display: none !important;
   }
 }
-.prev{
-  @media(max-width: 768px){
+.prev {
+  @media (max-width: 768px) {
     display: none !important;
   }
 }
@@ -109,63 +113,62 @@ button {
   cursor: pointer;
 }
 
-  .MuiOutlinedInput-root{
-    height: 50px !important;
-    border-radius: 34px !important;
-    background: pink !important;
-    opacity: 0.5 !important;
-    border: none !important;
-    font-style: normal !important;
-    font-weight: 600 !important;
-    font-size: 16px !important;
-    line-height: 33px !important;
-    outline: none !important;  
-    margin-top: 4px !important;
-  }
+.MuiOutlinedInput-root {
+  height: 50px !important;
+  border-radius: 34px !important;
+  background: pink !important;
+  opacity: 0.5 !important;
+  border: none !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  line-height: 33px !important;
+  outline: none !important;
+  margin-top: 4px !important;
+}
 
-.MuiInputLabel-root{
+.MuiInputLabel-root {
   color: rgba(255, 255, 255, 0.8) !important;
   font-style: normal !important;
   font-weight: 600 !important;
   font-size: 16px !important;
 }
 
-.MuiInputLabel-root.Mui-focused{
+.MuiInputLabel-root.Mui-focused {
   color: rgba(255, 255, 255, 0.8) !important;
-  font-size: 17px !important;  
+  font-size: 17px !important;
 }
 
-.MuiRadio-root.Mui-checked{
+.MuiRadio-root.Mui-checked {
   color: white !important;
 }
-.MuiRadio-root{
+.MuiRadio-root {
   color: white !important;
 }
 
- .solutions_inputBlock__sc7Lc input{
-color: black !important;
-font-size: 20px !important;
+.solutions_inputBlock__sc7Lc input {
+  color: black !important;
+  font-size: 20px !important;
 }
-.swiper-pagination-bullet{
-  background-color: red !important; 
+.swiper-pagination-bullet {
+  background-color: red !important;
 }
 
-.carousel-indicators [data-bs-target]{
+.carousel-indicators [data-bs-target] {
   background-color: red !important;
   // @media (max-width: 425px){
   //   margin-bottom: 15rem!important;
   // }
-    @media (max-width: 320px){
-      margin-top: 18rem!important;
-    }
+  @media (max-width: 320px) {
+    margin-top: 18rem !important;
+  }
 }
-.carousel-item span{
+.carousel-item span {
   border-radius: 5px !important;
 }
 
-
-.css-1v4ccyo{
-  @media (max-width: 425px){
+.css-1v4ccyo {
+  @media (max-width: 425px) {
     margin-bottom: 20px !important;
   }
 }

@@ -8,21 +8,23 @@ import about2 from "../../../assets/poliglot/about-second.png";
 import { Carousel } from "react-bootstrap";
 import { motion } from "framer-motion";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useTranslation } from "next-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
   const [index, setIndex] = useState(0);
   const aboutText = [
     {
-      text: "Добро пожаловать на мой сайт! Меня зовут Нурдин. Я являюсь специалистом в области полиграфии с 11-летним стажем работы в судебной системе и 12-летним стажем работы в следственных органах. Являюсь членом Государственной аттестационной комиссии Академии МВД Кыргызской Республики по гражданско-правовым дисциплинам и действующим адвокатом. Прежде чем заняться полиграфией, работал судьей и занимал различные руководящие должности в следственных органах, такие как начальник Следственного Управления, что позволило мне приобрести ценный опыт в области правопорядка и правосудия.",
+      text: t("about.desc1"),
     },
     {
-      text: "Обладаю двумя высшими юридическими образованиями. Моя специализация в области полиграфии позволяет мне помогать людям достичь правдивости и объективности в различных ситуациях, используя современные методики и оборудования.",
+      text: t("about.desc2"),
     },
     {
-      text: "Горжусь своей профессиональной репутацией и индивидуальным подходом к каждому клиенту. Моя цель - предоставить вам качественные услуги в области полиграфического анализа, помочь достичь ясности и понимания важных вопросов и ситуаций.",
+      text: t("about.desc3"),
     },
     {
-      text: "Свяжитесь со мной, чтобы узнать больше о том, как мой анализ в полиграфии может быть полезной для вас. Готов помочь вам достичь долгожданных ответов и разрешить важные вопросы. Благодарю за доверие и интерес к моей работе!",
+      text: t("about.desc4"),
     },
   ];
   return (
@@ -40,7 +42,7 @@ const About = () => {
               }}
               className={style.heading}
             >
-              <ContentHeadTitle title={"ОБО МНЕ"} />
+              <ContentHeadTitle title={t("about.title")} />
             </motion.div>
             <div className={style.content}>
               <motion.h4
@@ -52,7 +54,7 @@ const About = () => {
                   hidden: { opacity: 0, scale: 0 },
                 }}
               >
-                Специалист-полиграфолог
+                {t("about.specialist")}
               </motion.h4>
               {aboutText.map((item, index) => (
                 <motion.div
@@ -82,7 +84,7 @@ const About = () => {
               className={style.buttons}
             >
               <a href="/#contacts">
-                <button>Связаться</button>
+                <button>{t("about.btnText")}</button>
               </a>
             </motion.div>
           </div>
@@ -102,10 +104,10 @@ const About = () => {
               className={style.slider}
             >
               <Carousel.Item>
-                <Image src={about1} width={900} height={600} />
+                <Image src={about1} />
               </Carousel.Item>
               <Carousel.Item>
-                <Image src={about2} width={900} height={600} />
+                <Image src={about2} />
               </Carousel.Item>
             </Carousel>
           </motion.div>

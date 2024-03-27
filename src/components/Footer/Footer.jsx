@@ -4,8 +4,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import logo from "../../assets/poliglot/snapedit_1711026401124 (1) (1).png";
 import whatsapp from "../../assets/poliglot/WhatsApp_icon.png";
+import { useTranslation } from "next-i18next";
+import replaceBr from "../../helpers/helper";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className={style.footer}>
       <div className="container">
@@ -23,28 +26,28 @@ const Footer = () => {
             <div className={style.logoBlock}>
               <Image src={logo} />
             </div>
-            <p>
-              Полиграф – Ваш надёжный компас <br /> в достижении правды
-            </p>
+            <p
+              dangerouslySetInnerHTML={{ __html: replaceBr(t("footer.text")) }}
+            ></p>
           </div>
           <div className={style.blockFooter}>
-            <h3>Страницы</h3>
-            <a href="/#">Главная</a>
-            <a href="/#about">Обо мне</a>
-            <a href="/#services">Услуги</a>
-            <a href="/#advantages">Преимущества</a>
-            <a href="/#contacts">Контакты</a>
-            <a href="/#clients">Отзывы</a>
+            <h3>{t("footer.pages")}</h3>
+            <a href="/#">{t("header.navbar.home")}</a>
+            <a href="/#about">{t("header.navbar.about")}</a>
+            <a href="/#services">{t("header.navbar.services")}</a>
+            <a href="/#advantages">{t("header.navbar.advantages")}</a>
+            <a href="/#contacts">{t("header.navbar.contacts")}</a>
+            <a href="/#clients">{t("header.navbar.reviews")}</a>
           </div>
           <div className={style.blockFooter}>
-            <h3>Контакты</h3>
+            <h3>{t("header.navbar.contacts")}</h3>
             <a href="mailto:poligraph-bishkek@mail.ru">
               poligraph-bishkek@mail.ru
             </a>
             <a href="tel:+996995696932">+996 995 696 932</a>
             <a href="tel:+996500100045">+996 500 100 045</a>
             <a target="_blank" href="https://www.google.com/maps/place/Bishkek">
-              Город Бишкек
+              {t("footer.city")}
             </a>
             <div className={style.socialMedia}>
               <a
