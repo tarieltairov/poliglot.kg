@@ -83,6 +83,11 @@
         font-size: 26px;
       }
     }
+    @media (max-width: 475px) {
+      a {
+        font-size: 20px;
+      }
+    }
   }
 
   .icon-placeholder {
