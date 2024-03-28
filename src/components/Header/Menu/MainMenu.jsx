@@ -24,13 +24,6 @@ const footerVariants = {
   },
 };
 
-const style = {
-  display: "flex",
-  alignItems: "center",
-  gridGap: "64px",
-  flexWrap: "wrap",
-};
-
 export const useDimensions = (ref) => {
   const dimensions = useRef({ width: 0, height: 0 });
 
@@ -105,14 +98,13 @@ export const MainMenu = ({ setIsBurgerOpen }) => {
               style={{
                 textDecoration: "none",
                 color: "white",
-                marginTop: "5px",
               }}
             >
               <h3>Полиграф-Бишкек</h3>
             </a>
           </div>
 
-          <div style={style}>
+          <div className="last">
             <a
               rel="noreferrer noopener"
               target="_blank"

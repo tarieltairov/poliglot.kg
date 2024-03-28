@@ -12,13 +12,13 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 function Home() {
   return (
     <MainLayout>
-      <Hero />
+      {/* <Hero />
       <About />
       <Services />
       <Expertice />
       <Solutions />
       <Slider />
-      <PreFooter />
+      <PreFooter /> */}
     </MainLayout>
   );
 }

@@ -136,6 +136,23 @@
       display: flex;
       align-content: center;
       grid-gap: 20px;
+      a {
+        display: flex;
+        align-items: center;
+        h3 {
+          margin: 0;
+        }
+      }
+    }
+
+    .last {
+      display: flex;
+      align-items: center;
+      grid-gap: 64px;
+      flex-wrap: wrap;
+      @media (max-width: 375px) {
+        grid-gap: 20px;
+      }
     }
 
     a {
