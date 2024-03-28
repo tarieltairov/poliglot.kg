@@ -56,6 +56,9 @@
   border-radius: 20px;
   border: none;
   margin-bottom: 105px;
+  @media (max-width: 425px) {
+    margin-bottom: 55px;
+  }
 }
 
 @media (max-width: 320px) {
@@ -73,5 +76,8 @@
     max-width: 325px;
     line-height: 23px;
     font-size: 20px;
+  }
+  .whiteBlock button {
+    padding: 10px 24px;
   }
 }
