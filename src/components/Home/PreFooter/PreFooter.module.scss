@@ -17,6 +17,10 @@
   align-items: center;
   transform: scale(1.2);
   position: sticky;
+  @media (max-width: 425px) {
+    border-bottom-right-radius: 45%;
+    border-bottom-left-radius: 45%;
+  }
 }
 .whiteBlock h2 {
   font-style: normal;
