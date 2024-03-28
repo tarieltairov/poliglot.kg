@@ -11,7 +11,9 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 0 20px;
-
+    @media (max-width: 375px) {
+      padding: 0 10px;
+    }
     button {
       svg {
         path {
@@ -25,10 +27,15 @@
     display: flex;
     align-items: center;
     grid-gap: 13px;
-    width: 150px;
     cursor: pointer;
+    @media (max-width: 935px) {
+      img {
+        width: 100px;
+        height: 67px;
+      }
+    }
     .locale {
-      display: inline-flex;
+      display: flex;
       color: white;
       gap: 10px;
       font-family: "Gilroy", sans-serif;
@@ -74,8 +81,6 @@
 }
 
 .mainHeaderBlack {
-  //background: rgba(0, 0, 0, 1);
-
   .logo h2 {
     color: #ffff;
   }
@@ -121,27 +126,25 @@
   justify-content: space-between;
   text-align: center;
   align-items: center;
-  @media (max-width: 995px) {
-    width: 70%;
-  }
   p {
     color: white;
     cursor: pointer;
     font-weight: 500;
     margin-right: 11px;
     margin-bottom: 0;
+    white-space: nowrap;
     &:hover {
       color: orangered;
     }
   }
-  @media (max-width: 800px) {
+  @media (max-width: 835px) {
     display: none;
   }
 }
 
 .burger {
   display: none;
-  @media (max-width: 800px) {
+  @media (max-width: 835px) {
     display: block;
   }
 }
@@ -152,4 +155,9 @@
   border-radius: 35px;
   background: linear-gradient(97.01deg, orangered -4.32%, red 89.23%);
   color: white;
+  @media (max-width: 932px) {
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+  }
 }

@@ -34,7 +34,7 @@ const Header = ({ inView }) => {
               <Image src={logo} height={100} alt="logo" />
             </Link>
             <div className={style.locale}>
-              {t("header.navbar.lang")}
+              {t("header.navbar.lang")}:
               <select onChange={onLangChange} value={router.locale}>
                 <option value="ru">Русский</option>
                 <option value="kg">Кыргызча</option>
