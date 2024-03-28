@@ -17,7 +17,7 @@ function Home() {
       {/* <Services /> */}
       {/* <Expertice /> */}
       {/* <Solutions /> */}
-      {/* <Slider /> */}
+      <Slider />
       <PreFooter />
     </MainLayout>
   );
