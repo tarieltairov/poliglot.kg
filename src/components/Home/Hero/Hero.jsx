@@ -14,7 +14,7 @@ const Hero = () => {
           <button>{t("hero.btnText")}</button>
         </Link>
       </div>
-      <Image src={pulseGif} alt="main-image" priority />
+      <Image src={pulseGif} alt="main-image" />
     </div>
   );
 };
