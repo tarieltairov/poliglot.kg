@@ -14,7 +14,7 @@ function Home() {
     <MainLayout>
       {/* <Hero /> */}
       {/* <About /> */}
-      {/* <Services /> */}
+      <Services />
       <Expertice />
       <Solutions />
       <Slider />
