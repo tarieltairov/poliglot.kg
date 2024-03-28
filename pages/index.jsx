@@ -13,7 +13,7 @@ function Home() {
   return (
     <MainLayout>
       {/* <Hero /> */}
-      {/* <About /> */}
+      <About />
       <Services />
       <Expertice />
       <Solutions />

@@ -30,20 +30,20 @@ const About = () => {
   return (
     <div className={style.main}>
       <div id={"about"} className="container">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.5 }}
+          variants={{
+            visible: { opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0 },
+          }}
+          className={style.heading}
+        >
+          <ContentHeadTitle centered title={t("about.title")} />
+        </motion.div>
         <div className={style.block}>
           <div className={style.firstBlock}>
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 0.5 }}
-              variants={{
-                visible: { opacity: 1, scale: 1 },
-                hidden: { opacity: 0, scale: 0 },
-              }}
-              className={style.heading}
-            >
-              <ContentHeadTitle title={t("about.title")} />
-            </motion.div>
             <div className={style.content}>
               <motion.h4
                 initial="hidden"
@@ -90,6 +90,7 @@ const About = () => {
           </div>
 
           <motion.div
+            className={style.cc}
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.5 }}
@@ -102,6 +103,7 @@ const About = () => {
               activeIndex={index}
               onSelect={setIndex}
               className={style.slider}
+              // interval={null}
             >
               <Carousel.Item>
                 <Image src={about1} alt="about1" />
