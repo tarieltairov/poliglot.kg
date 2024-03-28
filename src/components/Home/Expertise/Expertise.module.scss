@@ -26,6 +26,13 @@
     color: black;
     transition: 0.7s;
     cursor: pointer;
+    @media (max-width: 1200px) {
+      min-width: 100%;
+    }
+    @media (max-width: 425px) {
+      padding: 32px 0;
+    }
+
     &:hover {
       box-shadow: 0px 0px 25px gray;
     }
@@ -36,20 +43,13 @@
         height: 100%;
       }
     }
-    @media (max-width: 1200px) {
-      width: 350px;
-    }
-    .python_icon,
-    .js_icon {
-      margin-bottom: 40px;
-    }
-    @media (max-width: 768px) {
-      min-width: 100%;
-    }
   }
 
   img {
     margin-bottom: 38px;
+    @media (max-width: 425px) {
+      margin-bottom: 0;
+    }
   }
   h2 {
     margin-bottom: 16px;

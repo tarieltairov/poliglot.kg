@@ -15,7 +15,7 @@ function Home() {
       {/* <Hero /> */}
       {/* <About /> */}
       {/* <Services /> */}
-      {/* <Expertice /> */}
+      <Expertice />
       <Solutions />
       <Slider />
       <PreFooter />
