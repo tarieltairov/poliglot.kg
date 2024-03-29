@@ -5,4 +5,7 @@ module.exports = {
   swcMinify: false, // it should be false by default
   compress: true,
   i18n,
+  env: {
+    NEXT_SHARP_PATH: "/tmp/node_modules/sharp",
+  },
 };
