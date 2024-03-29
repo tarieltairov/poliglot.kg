@@ -2,7 +2,7 @@ import React from "react";
 import style from "./Footer.module.scss";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import logo from "../../assets/poliglot/snapedit_1711026401124 (1) (1).png";
+import logo from "../../assets/svg/logo.svg";
 import whatsapp from "../../assets/poliglot/WhatsApp_icon.png";
 import { useTranslation } from "next-i18next";
 import replaceBr from "../../helpers/helper";

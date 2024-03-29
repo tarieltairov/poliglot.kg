@@ -133,8 +133,24 @@
     margin-right: 11px;
     margin-bottom: 0;
     white-space: nowrap;
+    position: relative;
     &:hover {
       color: orangered;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 1.7px;
+      bottom: 0;
+      left: 0;
+      background-color: orangered;
+      transition: width 0.5s ease;
+      border-radius: 1px;
+    }
+
+    &:hover::before {
+      width: 100%;
     }
   }
   @media (max-width: 835px) {
@@ -155,6 +171,9 @@
   border-radius: 35px;
   background: linear-gradient(97.01deg, orangered -4.32%, red 89.23%);
   color: white;
+  &:hover {
+    background: linear-gradient(97.01deg, orange -4.32%, orangered 89.23%);
+  }
   @media (max-width: 932px) {
     width: auto;
     height: auto;

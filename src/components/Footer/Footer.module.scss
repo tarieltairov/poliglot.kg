@@ -24,8 +24,6 @@
   align-items: center;
   margin-bottom: 16px;
   width: 150px;
-  background-color: white;
-  border-radius: 50px;
   @media (max-width: 375px) {
     width: 125px;
   }
@@ -51,6 +49,9 @@
   margin: 0 10px;
   a {
     margin-bottom: 10px;
+    &:hover {
+      text-decoration: underline !important;
+    }
   }
 
   @media (max-width: 768px) {

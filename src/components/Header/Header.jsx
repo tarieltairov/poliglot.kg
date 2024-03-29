@@ -3,7 +3,7 @@ import style from "./Header.module.scss";
 import { MainMenu } from "./Menu/MainMenu";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../assets/poliglot/snapedit_1711026401124 (1) (1).png";
+import logo from "../../assets/svg/logo.svg";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 
@@ -31,7 +31,7 @@ const Header = ({ inView }) => {
         <div className={style.header}>
           <div className={style.logo}>
             <Link href="/">
-              <Image src={logo} height={100} alt="logo" />
+              <Image src={logo} height={90} alt="logo" />
             </Link>
             <div className={style.locale}>
               {t("header.navbar.lang")}:

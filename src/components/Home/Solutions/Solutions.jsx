@@ -64,7 +64,7 @@ const Solutions = () => {
             {links.map((item, index) => (
               <a href={item.link} key={index}>
                 <Image src={item.icon} alt="images" />
-                {item.text}
+                <span>{item.text}</span>
               </a>
             ))}
           </div>
