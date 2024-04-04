@@ -30,7 +30,7 @@ export default function MainLayout({ children }) {
           name="google-site-verification"
           content="oSCWk-Y-_Xhyw0OYr8eI7pOkPOCGLaicG6xc04XGndc"
         />
-        <meta name="og:title" content="Специалист полиграфолог" />
+        <meta property="og:title" content="Специалист полиграфолог" />
         <meta property="og:description" content="Мы можем достичь истины!" />
         <meta property="og:url" content="https://www.poligraph.kg/" />
         <meta property="og:image" content="./ogimage.png" />
@@ -39,6 +39,7 @@ export default function MainLayout({ children }) {
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Preview image for Poligraph" />
         <meta property="og:type" content="website" />
+        <meta name="robots" content="index" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
