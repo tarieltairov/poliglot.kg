@@ -9,6 +9,7 @@ const Hero = () => {
   return (
     <div className={style.hh}>
       <div className={style.toto}>
+        <h1>{t("hero.head")}</h1>
         <p>{t("hero.text")}</p>
         <Link href="/#contacts">
           <button>{t("hero.btnText")}</button>

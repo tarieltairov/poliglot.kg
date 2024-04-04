@@ -41,22 +41,29 @@
     @media (max-width: 320px) {
       padding: 0 10px;
     }
-
-    p {
-      margin-top: 30%;
+    h1 {
       color: white;
-      font-size: 25px;
-      margin-bottom: 20px;
+      margin-top: 30%;
       text-align: center;
       @media (max-width: 768px) {
         margin-top: 60%;
       }
+
+      @media (max-width: 425px) {
+        margin-bottom: 20px;
+        font-size: 25px;
+      }
+    }
+    p {
+      color: white;
+      font-size: 25px;
+      margin-bottom: 20px;
+      text-align: center;
       @media (max-width: 600px) {
         font-size: 20px;
       }
       @media (max-width: 425px) {
-        margin-top: 70%;
-        font-size: 17px;
+        display: none;
       }
     }
     button {
